@@ -26,21 +26,27 @@ class Achievements {
 	public static function init()
 	{
 		createAchievement('friday_night_play',		{name: "Freaky on a Friday Night", description: "Play on a Friday... Night.", hidden: true});
-		createAchievement('week1_nomiss',			{name: "She Calls Me Daddy Too", description: "Beat Week 1 on Hard with no Misses."});
-		createAchievement('week2_nomiss',			{name: "No More Tricks", description: "Beat Week 2 on Hard with no Misses."});
-		createAchievement('week3_nomiss',			{name: "Call Me The Hitman", description: "Beat Week 3 on Hard with no Misses."});
-		createAchievement('week4_nomiss',			{name: "Lady Killer", description: "Beat Week 4 on Hard with no Misses."});
-		createAchievement('week5_nomiss',			{name: "Missless Christmas", description: "Beat Week 5 on Hard with no Misses."});
-		createAchievement('week6_nomiss',			{name: "Highscore!!", description: "Beat Week 6 on Hard with no Misses."});
-		createAchievement('week7_nomiss',			{name: "God Effing Damn It!", description: "Beat Week 7 on Hard with no Misses."});
-		createAchievement('ur_bad',					{name: "What a Funkin' Disaster!", description: "Complete a Song with a rating lower than 20%."});
-		createAchievement('ur_good',				{name: "Perfectionist", description: "Complete a Song with a rating of 100%."});
-		createAchievement('roadkill_enthusiast',	{name: "Roadkill Enthusiast", description: "Watch the Henchmen die 50 times.", maxScore: 50, maxDecimals: 0});
-		createAchievement('oversinging', 			{name: "Oversinging Much...?", description: "Sing for 10 seconds without going back to Idle."});
-		createAchievement('hype',					{name: "Hyperactive", description: "Finish a Song without going back to Idle."});
-		createAchievement('two_keys',				{name: "Just the Two of Us", description: "Finish a Song pressing only two keys."});
-		createAchievement('toastie',				{name: "Toaster Gamer", description: "Have you tried to run the game on a toaster?"});
-		createAchievement('debugger',				{name: "Debugger", description: "Beat the \"Test\" Stage from the Chart Editor.", hidden: true});
+		createAchievement('week1_nomiss',			{name: "VIP Attendee", description: "Beat Week 1 with no Misses."});
+		createAchievement('week2_nomiss',			{name: "Unfazed by Horror", description: "Beat Week 2 with no Misses."});
+		createAchievement('week3_nomiss',			{name: "Disarmed", description: "Beat Week 3 with no Misses."});
+		createAchievement('week4_nomiss',			{name: "I HATE THAT HEDGEHOG!!!", description: "Beat Week 4 with no Misses."});
+		createAchievement('week5_nomiss',			{name: "You Have No Life", description: "Beat Week 5 with no Misses."});
+		createAchievement('week6_nomiss',			{name: "Limbo Rapper Extraordinaire", description: "Beat Week 6 with no Misses."});
+		createAchievement('week7_nomiss',			{name: "Hat of Honor and Gold", description: "Beat Week 7 with no Misses."});
+		createAchievement('week8_nomiss',			{name: "Ya Beat Her At Her Own Game", description: "Beat Week 8 with no Misses."});
+		createAchievement('weekendsandk_nomiss',		{name: "Better Than the Rest of Em", description: "Beat Weekend S&K with no Misses."});
+		createAchievement('sidestory1_nomiss',			{name: "how...", description: "Beat Side-Story 1 with no Misses."});
+		createAchievement('sidestory2_nomiss',			{name: "BOBULE BEEN BEATED WOWWW", description: "Beat Side-Story 2 with no Misses."});
+		createAchievement('sidestory3_nomiss',			{name: "Synning It", description: "Beat Side-Story 3 with no Misses."});
+		createAchievement('sidestory4_nomiss',			{name: "Ultimate Funkster'", description: "Beat Side-Story 4 with no Misses."});
+		createAchievement('ur_bad',				{name: "Playing like Lily", description: "Complete a Song with a rating lower than 20%."});
+		createAchievement('ur_good',				{name: "Synergy", description: "Complete a Song with a rating of 100%."});
+		createAchievement('roadkill_enthusiast',		{name: "A Delicious Gourmet Meal", description: "Restart Monitor in \"Stained Mask\" 5 times.", maxScore: 5, maxDecimals: 0});
+		createAchievement('oversinging', 			{name: "STOP SINGING OOOUGHHHH", description: "Sing for 10 seconds without going back to Idle."});
+		createAchievement('hype',				{name: "Austism Spectrum", description: "Finish a Song without going back to Idle."});
+		createAchievement('two_keys',				{name: "Double Trouble", description: "Finish a Song pressing only two keys."});
+		createAchievement('toastie',				{name: "PotatOS", description: "Do you ever wonder why Potatos conduct electricity?"});
+		createAchievement('debugger',				{name: "Boyfriend Who??", description: "Beat the \"Test\" Stage from the Chart Editor.", hidden: true});
 		
 		//dont delete this thing below
 		_originalLength = _sortID + 1;
