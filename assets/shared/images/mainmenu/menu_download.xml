@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_download.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="download idle0000" x="3" y="3" width="606" height="138"/>
+	<SubTexture name="download idle0001" x="3" y="3" width="606" height="138"/>
+	<SubTexture name="download idle0002" x="3" y="3" width="606" height="138"/>
+	<SubTexture name="download idle0003" x="3" y="144" width="606" height="138"/>
+	<SubTexture name="download idle0004" x="3" y="144" width="606" height="138"/>
+	<SubTexture name="download idle0005" x="3" y="144" width="606" height="138"/>
+	<SubTexture name="download idle0006" x="3" y="285" width="606" height="138"/>
+	<SubTexture name="download idle0007" x="3" y="285" width="606" height="138"/>
+	<SubTexture name="download idle0008" x="3" y="285" width="606" height="138"/>
+	<SubTexture name="download selected0000" x="3" y="426" width="718" height="170" frameX="0" frameY="-5" frameWidth="718" frameHeight="175"/>
+	<SubTexture name="download selected0001" x="3" y="599" width="715" height="171" frameX="-1" frameY="0" frameWidth="718" frameHeight="175"/>
+	<SubTexture name="download selected0002" x="3" y="773" width="714" height="171" frameX="-4" frameY="-4" frameWidth="718" frameHeight="175"/>
+</TextureAtlas>
