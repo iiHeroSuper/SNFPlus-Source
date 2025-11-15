@@ -1,0 +1,2 @@
+when a key is pressed on the title screen
+press start frames 1 and 2 should swap back and forth (confirm anim)
