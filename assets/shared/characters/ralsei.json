@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"offsets": [355, 690],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		},
+		{
+			"offsets": [385, 678],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [335, 665],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [341, 724],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [303, 676],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"offsets": [355, 620],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Miss"
+		},
+		{
+			"offsets": [355, 620],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Miss"
+		},
+		{
+			"offsets": [355, 620],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Miss"
+		},
+		{
+			"offsets": [355, 620],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Miss"
+		},
+		{
+			"offsets": [355, 620],
+			"loop": false,
+			"fps": 24,
+			"anim": "hey",
+			"indices": [],
+			"name": "Miss"
+		}
+	],
+	"vocals_file": "ralsei",
+	"no_antialiasing": false,
+	"image": "characters/ralsei",
+	"position": [-10, 350],
+	"healthicon": "ralsei",
+	"flip_x": true,
+	"healthbar_colors": [111, 255, 115],
+	"camera_position": [220, -130],
+	"sing_duration": 4,
+	"scale": 0.32,
+	"_editor_isPlayer": true
+}
