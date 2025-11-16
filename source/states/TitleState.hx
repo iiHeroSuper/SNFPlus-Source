@@ -539,7 +539,7 @@ class TitleState extends MusicBeatState
 				case 6:
 					createCoolText(['Not associated', 'with'], -40);
 				case 8:
-					addMoreText('newgrounds', -40);
+					addMoreText('newgrounds or sega', -40);
 					ngSpr.visible = true;
 				case 9:
 					deleteCoolText();
@@ -551,7 +551,7 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('Friday');
+					addMoreText('Sonic');
 				case 15:
 					addMoreText('Night');
 				case 16:
