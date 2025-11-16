@@ -5,7 +5,7 @@ THAT means it's time to celebrate!!! >:D
 
 Edit this code IF YOU DARE!!
 
-![SNFLogo]([https://xatimg.com/image/uiWVGXYtTzRQ.png])
+![SNFLogo]([https://xatimg.com/image/uiWVGXYtTzRQ.png]
 
 ----------------------------------------------------
 
