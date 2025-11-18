@@ -1,6 +1,5 @@
 // code written by tyler
 // snf team you rock :3
-// (current code relies on freeplay after pressing play. this will be fixed later)
 
 package states;
 
@@ -12,6 +11,7 @@ import flixel.util.FlxColor;
 import flixel.addons.display.FlxBackdrop;
 import backend.MusicBeatState;
 import backend.Paths; 
+
 import flixel.tweens.FlxEase;
 import flixel.addons.effects.FlxTrail;
 
@@ -19,56 +19,65 @@ import options.OptionsState;
 import states.CreditsState;
 import states.StoryMenuState;
 import states.FreeplayState;
-import states.PlaySelectState; 
 
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '1.0';
 
+	// Main Menu
 	var background:FlxSprite;
 	var checkerboard:FlxBackdrop;
 	var logo:FlxSprite;
 	var aeroBar:FlxSprite;
 	var logoTrail:FlxTrail;
-
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var middleOptions:Array<String> = ['play', 'gallery', 'credits', 'soundtest'];
 	var curSelected:Int = 1; 
 	var curMiddleOption:Int = 0; 
-
 	var arrowL:FlxSprite;
 	var arrowR:FlxSprite;
+	
+	var blender:FlxSprite;
+	var storyBtn:FlxSprite;
+	var freeplayBtn:FlxSprite;
+	var selector:FlxSprite; 
+	var curPlaySelect:Int = 0;
+
 	var lockedInput:Bool = false;
+	var menuMode:Int = 0;
 
 	override public function create()
 	{
 		super.create();
 
+		// BACKGROUNDS
 		background = new FlxSprite().loadGraphic(Paths.image('newmainmenu/tripletsborn'));
 		background.scrollFactor.set(); 
 		add(background);
 
 		checkerboard = new FlxBackdrop(Paths.image('newmainmenu/checkems'));
-		checkerboard.scale.set(2, 2);
 		checkerboard.velocity.set(50, 50); 
-		checkerboard.alpha = 1; 
 		checkerboard.scrollFactor.set();
+		checkerboard.scale.set(3, 3); 
 		add(checkerboard);
 
+		// LOGO
 		logo = new FlxSprite(0, 30).loadGraphic(Paths.image('newmainmenu/logo'));
 		logo.scale.set(0.7, 0.7); 
 		logo.updateHitbox();
 		logo.screenCenter(X);
-		logoTrail = new FlxTrail(logo, null, 4, 4, 0.3); // (target, graphic, length, delay, alpha)
+		
+		logoTrail = new FlxTrail(logo, null, 4, 4, 0.3); 
 		add(logoTrail);
 		
 		add(logo);
 
-		FlxTween.tween(logo, { y: logo.y + 20 }, 1.2, { // (Object, Properties, Duration)
+		FlxTween.tween(logo, { y: logo.y + 20 }, 1.2, {
 			type: FlxTween.PINGPONG,
 			ease: FlxEase.sineInOut
 		});
 
+		// MAIN MENU ITEMS
 		aeroBar = new FlxSprite(0, FlxG.height - 220).loadGraphic(Paths.image('newmainmenu/weird aero bar'));
 		aeroBar.scale.set(0.75, 0.75);
 		aeroBar.updateHitbox();
@@ -132,6 +141,43 @@ class MainMenuState extends MusicBeatState
 
 		positionArrows();
 		changeSelection();
+		
+		// PLAY SELECT MENU ITEMS (Story vs Freeplay)
+		blender = new FlxSprite().loadGraphic(Paths.image('newmainmenu/blender'));
+		blender.screenCenter();
+		blender.scrollFactor.set();
+		blender.visible = false;
+		blender.alpha = 0; 
+		add(blender);
+
+		storyBtn = new FlxSprite(0, 0).loadGraphic(Paths.image('newmainmenu/storymode'));
+		storyBtn.scale.set(0.7, 0.7); 
+		storyBtn.updateHitbox();
+		storyBtn.screenCenter(X);
+		storyBtn.y = (FlxG.height / 2) - 220;
+		storyBtn.visible = false;
+		add(storyBtn);
+
+		freeplayBtn = new FlxSprite(0, 0).loadGraphic(Paths.image('newmainmenu/freeplay'));
+		freeplayBtn.scale.set(0.7, 0.7);
+		freeplayBtn.updateHitbox();
+		freeplayBtn.screenCenter(X);
+		freeplayBtn.y = (FlxG.height / 2) - 5; 
+		freeplayBtn.visible = false;
+		add(freeplayBtn);
+
+		selector = new FlxSprite();
+		selector.frames = Paths.getSparrowAtlas('newmainmenu/arrowthing');
+		selector.animation.addByPrefix('idle', 'gay little arrow', 24, true);
+		selector.animation.play('idle');
+
+		selector.angle = 90; 
+		selector.scale.set(0.8, 0.8);
+		selector.updateHitbox();
+		selector.visible = false;
+		add(selector);
+
+		updatePlaySelectSelection(0); 
 	}
 
 	override public function update(elapsed:Float)
@@ -143,7 +189,16 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-
+		
+		if (menuMode == 0) {
+			updateMainMenu();
+		} else {
+			updatePlaySelect();
+		}
+	}
+	
+	function updateMainMenu()
+	{
 		var moved:Bool = false;
 		if (controls.UI_LEFT_P)
 		{
@@ -186,26 +241,81 @@ class MainMenuState extends MusicBeatState
 			
 			switch(curSelected)
 			{
-				case 0:
+				case 0: // TROPHY
 					selectedSprite.animation.play('hit');
 					selectedSprite.animation.finishCallback = function(name:String) {
-						trace("Go to Awards State (not implemented)");
+						trace("Go to Awards State");
 						lockedInput = false; 
 					};
 
-				case 1:
+				case 1: // PLAY
 					var animName = middleOptions[curMiddleOption];
 					selectedSprite.animation.play(animName + '-hit');
 					selectedSprite.animation.finishCallback = function(name:String) {
 						selectMiddleOption(); 
 					};
 
-				case 2:
+				case 2: // SETTINGS
 					selectedSprite.animation.play('hit');
 					selectedSprite.animation.finishCallback = function(name:String) {
 						MusicBeatState.switchState(new OptionsState());
 					};
 			}
+		}
+	}
+	
+	function updatePlaySelect()
+	{
+		if (controls.UI_UP_P || controls.UI_DOWN_P)
+		{
+			FlxG.sound.play(Paths.sound('scrollMenu'));
+			updatePlaySelectSelection(1);
+		}
+
+		if (controls.ACCEPT)
+		{
+			lockedInput = true; 
+			FlxG.sound.play(Paths.sound('confirmMenu'));
+
+			var selectedBtn = (curPlaySelect == 0) ? storyBtn : freeplayBtn;
+			FlxTween.tween(selectedBtn.scale, {x: 0.75, y: 0.75}, 0.1, {ease: FlxEase.sineInOut, type: FlxTween.PINGPONG});
+
+			new flixel.util.FlxTimer().start(0.5, function(tmr:flixel.util.FlxTimer) {
+				if (curPlaySelect == 0) // Story (Top)
+				{
+					MusicBeatState.switchState(new StoryMenuState());
+				}
+				else
+				{
+					MusicBeatState.switchState(new FreeplayState());
+				}
+			});
+		}
+
+		if (controls.BACK)
+		{
+			lockedInput = true;
+			FlxG.sound.play(Paths.sound('cancelMenu'));
+
+			FlxTween.tween(blender, {alpha: 0}, 0.2);
+			selector.visible = false;
+			storyBtn.visible = false;
+			freeplayBtn.visible = false;
+
+			new flixel.util.FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer) {
+				blender.visible = false;
+
+				menuMode = 0; 
+
+				menuItems.visible = true;
+				arrowL.visible = true;
+				arrowR.visible = true;
+				aeroBar.visible = true;
+				logo.visible = true;
+				logoTrail.visible = true;
+				
+				lockedInput = false; 
+			});
 		}
 	}
 
@@ -281,16 +391,66 @@ class MainMenuState extends MusicBeatState
 		switch(selection)
 		{
 			case 'play':
-				MusicBeatState.switchState(new FreeplayState()); 
+				lockedInput = true;
+				menuMode = 1;
+
+				menuItems.visible = false;
+				aeroBar.visible = false;
+				arrowL.visible = false;
+				arrowR.visible = false;
+				logo.visible = false;
+				logoTrail.visible = false;
+
+				blender.visible = true;
+				FlxTween.tween(blender, {alpha: 1}, 0.4, {ease: FlxEase.quartOut});
+
+				storyBtn.visible = true;
+				freeplayBtn.visible = true;
+				selector.visible = true;
+				
+				updatePlaySelectSelection(0); 
+				new flixel.util.FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer)
+				{
+					lockedInput = false;
+				});
 				return;
 			case 'gallery':
-				trace("Go to Gallery State (not implemented)");
+				trace("Go to Gallery");
 				lockedInput = false; 
 				return;
 			case 'credits':
 				MusicBeatState.switchState(new CreditsState());
 				return;
 			case 'soundtest':
+				trace("Go to SoundTest");
+				lockedInput = false; 
+				return;
+		}
+	}
+	
+	function updatePlaySelectSelection(change:Int = 0)
+	{
+		if(change != 0)
+			curPlaySelect = (curPlaySelect == 0) ? 1 : 0;
+
+		if (curPlaySelect == 0) {
+			storyBtn.alpha = 1.0;
+			freeplayBtn.alpha = 0.6;
+		} else {
+			storyBtn.alpha = 0.6;
+			freeplayBtn.alpha = 1.0;
+		}
+
+		if (curPlaySelect == 0)
+		{
+			selector.x = storyBtn.x - selector.width + 10; // Slight offset
+			selector.y = storyBtn.y + (storyBtn.height / 2) - (selector.height / 2);
+		}
+		else
+		{
+
+			selector.x = freeplayBtn.x - selector.width + 10; // Slight offset
+			selector.y = freeplayBtn.y + (freeplayBtn.height / 2) - (selector.height / 2);
 		}
 	}
 
