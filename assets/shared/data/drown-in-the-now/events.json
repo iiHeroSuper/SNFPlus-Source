@@ -1,0 +1,2268 @@
+{
+	"events": [
+		[
+			570.863145075354,
+			[
+				["subt", "O", ""]
+			]
+		],
+		[
+			713.578931344192,
+			[
+				["subt", "OO", ""]
+			]
+		],
+		[
+			856.294717613031,
+			[
+				["subt", "OOO", ""]
+			]
+		],
+		[
+			999.010503881869,
+			[
+				["subt", "OOOH", ""]
+			]
+		],
+		[
+			1141.72629015071,
+			[
+				["subt", "OOOH Y", ""]
+			]
+		],
+		[
+			1284.44207641955,
+			[
+				["subt", "OOOH YY", ""]
+			]
+		],
+		[
+			1427.15786268838,
+			[
+				["subt", "OOOH YYE", ""]
+			]
+		],
+		[
+			1569.87364895722,
+			[
+				["subt", "OOOH YYEE", ""]
+			]
+		],
+		[
+			1712.58943522606,
+			[
+				["subt", "OOOH YYEEA", ""]
+			]
+		],
+		[
+			1855.3052214949,
+			[
+				["subt", "OOOH YYEEAA", ""]
+			]
+		],
+		[
+			1998.02100776374,
+			[
+				["subt", "OOOH YYEEAAA", ""]
+			]
+		],
+		[
+			2140.73679403258,
+			[
+				["subt", "OOOH YYEEAAAA", ""]
+			]
+		],
+		[
+			2283.45258030142,
+			[
+				["subt", "OOOH YYEEAAAAA", ""]
+			]
+		],
+		[
+			2426.16836657025,
+			[
+				["subt", "OOOH YYEEAAAAAA", ""]
+			]
+		],
+		[
+			2568.88415283909,
+			[
+				["subt", "OOOH YYEEAAAAAAA", ""]
+			]
+		],
+		[
+			2711.59993910793,
+			[
+				["subt", "OOOH YYEEAAAAAAAA", ""]
+			]
+		],
+		[
+			2854.31572537677,
+			[
+				["subt", "OOOH YYEEAAAAAAAAA", ""]
+			]
+		],
+		[
+			2997.03151164561,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAA", ""]
+			]
+		],
+		[
+			3139.74729791445,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAH", ""]
+			]
+		],
+		[
+			3282.46308418328,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAHH", ""]
+			]
+		],
+		[
+			3425.17887045212,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAHHH", ""]
+			]
+		],
+		[
+			3567.89465672096,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAHHHH", ""]
+			]
+		],
+		[
+			3710.6104429898,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAHHHHH", ""]
+			]
+		],
+		[
+			3853.32622925864,
+			[
+				["subt", "OOOH YYEEAAAAAAAAAAHHHHHH", ""]
+			]
+		],
+		[
+			4709.62094687167,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			9704.67346628102,
+			[
+				["subt", "O", ""]
+			]
+		],
+		[
+			9847.38925254986,
+			[
+				["subt", "OO", ""]
+			]
+		],
+		[
+			9990.10503881869,
+			[
+				["subt", "OOO", ""]
+			]
+		],
+		[
+			10132.8208250875,
+			[
+				["subt", "OOOH", ""]
+			]
+		],
+		[
+			10275.5366113564,
+			[
+				["subt", "OOOH Y", ""]
+			]
+		],
+		[
+			10418.2523976252,
+			[
+				["subt", "OOOH YY", ""]
+			]
+		],
+		[
+			10560.968183894,
+			[
+				["subt", "OOOH YYE", ""]
+			]
+		],
+		[
+			10703.6839701629,
+			[
+				["subt", "OOOH YYEE", ""]
+			]
+		],
+		[
+			10846.3997564317,
+			[
+				["subt", "OOOH YYEEA", ""]
+			]
+		],
+		[
+			10989.1155427006,
+			[
+				["subt", "OOOH YYEEAH", ""]
+			]
+		],
+		[
+			11131.8313289694,
+			[
+				["subt", "OOOH YYEEAHH", ""]
+			]
+		],
+		[
+			11274.5471152382,
+			[
+				["subt", "OOOH YYEEAHHH", ""]
+			]
+		],
+		[
+			11417.2629015071,
+			[
+				["subt", "OOOH YYEEAHHHA", ""]
+			]
+		],
+		[
+			11559.9786877759,
+			[
+				["subt", "OOOH YYEEAHHHAA", ""]
+			]
+		],
+		[
+			11702.6944740448,
+			[
+				["subt", "OOOH YYEEAHHHAAA", ""]
+			]
+		],
+		[
+			11845.4102603136,
+			[
+				["subt", "OOOH YYEEAHHHAAAA", ""]
+			]
+		],
+		[
+			11988.1260465824,
+			[
+				["subt", "OOOH YYEEAHHHAAAAA", ""]
+			]
+		],
+		[
+			12130.8418328513,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAA", ""]
+			]
+		],
+		[
+			12273.5576191201,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAA", ""]
+			]
+		],
+		[
+			12416.2734053889,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAA", ""]
+			]
+		],
+		[
+			12558.9891916578,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAA", ""]
+			]
+		],
+		[
+			12701.7049779266,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAA", ""]
+			]
+		],
+		[
+			12844.4207641955,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			12987.1365504643,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13129.8523367331,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13272.568123002,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13415.2839092708,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13557.9996955397,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13700.7154818085,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13843.4312680773,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			13986.1470543462,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			14128.862840615,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			14271.5786268838,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAAAA", ""]
+			]
+		],
+		[
+			14414.2944131527,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAAAAH", ""]
+			]
+		],
+		[
+			14557.0101994215,
+			[
+				["subt", "OOOH YYEEAHHHAAAAAAAAAAAAAAAAAAAAHH", ""]
+			]
+		],
+		[
+			15127.8733444969,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			18553.052214949,
+			[
+				["subt", "r", ""]
+			]
+		],
+		[
+			18600.6241437053,
+			[
+				["subt", "rr", ""]
+			]
+		],
+		[
+			18648.1960724616,
+			[
+				["subt", "rrr", ""]
+			]
+		],
+		[
+			18695.7680012178,
+			[
+				["subt", "rrr", ""]
+			]
+		],
+		[
+			18743.3399299741,
+			[
+				["subt", "rrrak", ""]
+			]
+		],
+		[
+			18909.8416806211,
+			[
+				["subt", "rrrak ka", ""]
+			]
+		],
+		[
+			18981.1995737555,
+			[
+				["subt", "rrrak kaa", ""]
+			]
+		],
+		[
+			19028.7715025118,
+			[
+				["subt", "rrrak kaaa", ""]
+			]
+		],
+		[
+			19076.3434312681,
+			[
+				["subt", "rrrak kaaak", ""]
+			]
+		],
+		[
+			19409.346932562,
+			[
+				["subt", "rock", ""]
+			]
+		],
+		[
+			19694.7785050997,
+			[
+				["subt", "rock when", ""]
+			]
+		],
+		[
+			19837.4942913685,
+			[
+				["subt", "rock when i", ""]
+			]
+		],
+		[
+			19980.2100776374,
+			[
+				["subt", "rock when i rip", ""]
+			]
+		],
+		[
+			20122.9258639062,
+			[
+				["subt", "rock when i rip it", ""]
+			]
+		],
+		[
+			20265.6416501751,
+			[
+				["subt", "when ", ""]
+			]
+		],
+		[
+			20408.3574364439,
+			[
+				["subt", "when im", ""]
+			]
+		],
+		[
+			20551.0732227127,
+			[
+				["subt", "when im ro", ""]
+			]
+		],
+		[
+			20693.7890089816,
+			[
+				["subt", "when im rollin", ""]
+			]
+		],
+		[
+			20836.5047952504,
+			[
+				["subt", "when im rollin on", ""]
+			]
+		],
+		[
+			21121.9363677881,
+			[
+				["subt", "when im rollin on clouds", ""]
+			]
+		],
+		[
+			21407.3679403258,
+			[
+				["subt", "shout", ""]
+			]
+		],
+		[
+			21692.7995128634,
+			[
+				["subt", "shout loud", ""]
+			]
+		],
+		[
+			21978.2310854011,
+			[
+				["subt", "breathe", ""]
+			]
+		],
+		[
+			22263.6626579388,
+			[
+				["subt", "breathe in", ""]
+			]
+		],
+		[
+			22549.0942304765,
+			[
+				["subt", "wont", ""]
+			]
+		],
+		[
+			22691.8100167453,
+			[
+				["subt", "wont you", ""]
+			]
+		],
+		[
+			22834.5258030142,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			23119.9573755518,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			23262.6731618207,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			23405.3889480895,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			23976.2520931649,
+			[
+				["subt", "rock", ""]
+			]
+		],
+		[
+			24261.6836657025,
+			[
+				["subt", "rock when", ""]
+			]
+		],
+		[
+			24404.3994519714,
+			[
+				["subt", "rock when i", ""]
+			]
+		],
+		[
+			24547.1152382402,
+			[
+				["subt", "rock when i rip", ""]
+			]
+		],
+		[
+			24689.8310245091,
+			[
+				["subt", "rock when i rip it", ""]
+			]
+		],
+		[
+			24832.5468107779,
+			[
+				["subt", "when ", ""]
+			]
+		],
+		[
+			24975.2625970467,
+			[
+				["subt", "when im", ""]
+			]
+		],
+		[
+			25117.9783833156,
+			[
+				["subt", "when im ro", ""]
+			]
+		],
+		[
+			25260.6941695844,
+			[
+				["subt", "when im rollin", ""]
+			]
+		],
+		[
+			25403.4099558532,
+			[
+				["subt", "when im rollin on", ""]
+			]
+		],
+		[
+			25688.8415283909,
+			[
+				["subt", "when im rollin on clouds", ""]
+			]
+		],
+		[
+			25974.2731009286,
+			[
+				["subt", "shout", ""]
+			]
+		],
+		[
+			26259.7046734663,
+			[
+				["subt", "shout loud", ""]
+			]
+		],
+		[
+			26545.136246004,
+			[
+				["subt", "breathe", ""]
+			]
+		],
+		[
+			26830.5678185416,
+			[
+				["subt", "breathe in", ""]
+			]
+		],
+		[
+			27115.9993910793,
+			[
+				["subt", "wont", ""]
+			]
+		],
+		[
+			27258.7151773481,
+			[
+				["subt", "wont you", ""]
+			]
+		],
+		[
+			27401.430963617,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			27686.8625361547,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			27829.5783224235,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			27972.2941086923,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			28543.1572537677,
+			[
+				["subt", "rock", ""]
+			]
+		],
+		[
+			28828.5888263054,
+			[
+				["subt", "rock when", ""]
+			]
+		],
+		[
+			28971.3046125742,
+			[
+				["subt", "rock when i", ""]
+			]
+		],
+		[
+			29114.020398843,
+			[
+				["subt", "rock when i rip", ""]
+			]
+		],
+		[
+			29256.7361851119,
+			[
+				["subt", "rock when i rip it", ""]
+			]
+		],
+		[
+			29399.4519713807,
+			[
+				["subt", "when ", ""]
+			]
+		],
+		[
+			29542.1677576496,
+			[
+				["subt", "when im", ""]
+			]
+		],
+		[
+			29684.8835439184,
+			[
+				["subt", "when im ro", ""]
+			]
+		],
+		[
+			29827.5993301872,
+			[
+				["subt", "when im rollin", ""]
+			]
+		],
+		[
+			29970.3151164561,
+			[
+				["subt", "when im rollin on", ""]
+			]
+		],
+		[
+			30255.7466889938,
+			[
+				["subt", "when im rollin on clouds", ""]
+			]
+		],
+		[
+			30541.1782615314,
+			[
+				["subt", "shout", ""]
+			]
+		],
+		[
+			30826.6098340691,
+			[
+				["subt", "shout loud", ""]
+			]
+		],
+		[
+			31112.0414066068,
+			[
+				["subt", "breathe", ""]
+			]
+		],
+		[
+			31397.4729791445,
+			[
+				["subt", "breathe in", ""]
+			]
+		],
+		[
+			31682.9045516821,
+			[
+				["subt", "wont", ""]
+			]
+		],
+		[
+			31825.620337951,
+			[
+				["subt", "wont you", ""]
+			]
+		],
+		[
+			31968.3361242198,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			32253.7676967575,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			32396.4834830263,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			32539.1992692952,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			32753.2729486984,
+			[
+				["subt", "DROWN IN THE NOW", ""]
+			]
+		],
+		[
+			32895.9887349673,
+			[
+				["subt", "DROWN IN THE NOW (said i-)", ""]
+			]
+		],
+		[
+			33110.0624143705,
+			[
+				["subt", "rock", ""]
+			]
+		],
+		[
+			33395.4939869082,
+			[
+				["subt", "rock when", ""]
+			]
+		],
+		[
+			33538.209773177,
+			[
+				["subt", "rock when i", ""]
+			]
+		],
+		[
+			33680.9255594459,
+			[
+				["subt", "rock when i rip", ""]
+			]
+		],
+		[
+			33823.6413457147,
+			[
+				["subt", "rock when i rip it", ""]
+			]
+		],
+		[
+			33966.3571319835,
+			[
+				["subt", "when ", ""]
+			]
+		],
+		[
+			34109.0729182524,
+			[
+				["subt", "when im", ""]
+			]
+		],
+		[
+			34251.7887045212,
+			[
+				["subt", "when im ro", ""]
+			]
+		],
+		[
+			34394.5044907901,
+			[
+				["subt", "when im rollin", ""]
+			]
+		],
+		[
+			34537.2202770589,
+			[
+				["subt", "when im rollin on", ""]
+			]
+		],
+		[
+			34822.6518495966,
+			[
+				["subt", "when im rollin on clouds", ""]
+			]
+		],
+		[
+			35108.0834221343,
+			[
+				["subt", "shout", ""]
+			]
+		],
+		[
+			35393.5149946719,
+			[
+				["subt", "shout loud", ""]
+			]
+		],
+		[
+			35678.9465672096,
+			[
+				["subt", "breathe", ""]
+			]
+		],
+		[
+			35964.3781397473,
+			[
+				["subt", "breathe in", ""]
+			]
+		],
+		[
+			36249.809712285,
+			[
+				["subt", "wont", ""]
+			]
+		],
+		[
+			36392.5254985538,
+			[
+				["subt", "wont you", ""]
+			]
+		],
+		[
+			36535.2412848227,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			36820.6728573603,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			36963.3886436292,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			37106.104429898,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			37391.5360024357,
+			[
+				["subt", "", "931011"]
+			]
+		],
+		[
+			37962.399147511,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			46810.777896179,
+			[
+				["subt", "Starship ripping through the night", ""]
+			]
+		],
+		[
+			48523.3673314051,
+			[
+				["subt", "Tripping through your sights", ""]
+			]
+		],
+		[
+			49522.377835287,
+			[
+				["subt", "Pop up and shadow when I pine through the blind", ""]
+			]
+		],
+		[
+			51734.472522454,
+			[
+				["subt", "Seen shades of rays as they move through the space", ""]
+			]
+		],
+		[
+			54660.1461409652,
+			[
+				["subt", "We lace, we up concrete streets", ""]
+			]
+		],
+		[
+			56872.2408281322,
+			[
+				["subt", "Streaks tall paintbrush strokes", ""]
+			]
+		],
+		[
+			58299.3986908205,
+			[
+				["subt", "Oh so gloriously", ""]
+			]
+		],
+		[
+			60011.9881260466,
+			[
+				["subt", "Story unfolds which one will be told", ""]
+			]
+		],
+		[
+			62010.0091338103,
+			[
+				["subt", "*i turned my head away so i can breathe*", "FFFF00"]
+			]
+		],
+		[
+			62295.440706348,
+			[
+				["subt", "Some get sold, some just fold", ""]
+			]
+		],
+		[
+			64507.535393515,
+			[
+				["Play Animation", "hey", "BF"]
+			]
+		],
+		[
+			65078.3985385904,
+			[
+				["subt", "Multi beings releasing parallel songs", ""]
+			]
+		],
+		[
+			67789.9984776983,
+			[
+				["subt", "Swells to break all the dry spells", ""]
+			]
+		],
+		[
+			69680.9826457604,
+			[
+				["subt", "Late bells ring crack shells", ""]
+			]
+		],
+		[
+			71143.819455016,
+			[
+				["subt", "(When they got us)", ""]
+			]
+		],
+		[
+			71643.3247069569,
+			[
+				["subt", "Righteousness love of life will prevail", ""]
+			]
+		],
+		[
+			74212.208859796,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			101613.639823413,
+			[
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			101899.071395951,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			102041.787182219,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			102184.502968488,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			102327.218754757,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			102469.934541026,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			102612.650327295,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			102755.366113564,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			102898.081899833,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			103040.797686101,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			103326.229258639,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			103611.660831177,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			103897.092403714,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			104182.523976252,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			104467.95554879,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			104753.387121327,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			104896.102907596,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			105038.818693865,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			105324.250266403,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			105466.966052672,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			105609.68183894,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			106180.544984016,
+			[
+				["subt", "Move like the misses to kiss this style", ""]
+			]
+		],
+		[
+			108178.56599178,
+			[
+				["subt", "When ya dance in the darkness the quiet shout", ""]
+			]
+		],
+		[
+			110747.450144619,
+			[
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			111032.881717156,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			111175.597503425,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			111318.313289694,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			111461.029075963,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			111603.744862232,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			111746.4606485,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			111889.176434769,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			112031.892221038,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			112174.608007307,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			112460.039579845,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			112745.471152382,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			113030.90272492,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			113316.334297458,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			113601.765869995,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			113887.197442533,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			114029.913228802,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			114172.629015071,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			114458.060587608,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			114600.776373877,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			114743.492160146,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			115028.923732684,
+			[
+				["subt", "On the end, on the back, flip crystal tracks", ""]
+			]
+		],
+		[
+			117597.807885523,
+			[
+				["subt", "Method relax fast forward play back", ""]
+			]
+		],
+		[
+			119881.260465824,
+			[
+				["subt", "Electrofied", ""]
+			]
+		],
+		[
+			120951.628862841,
+			[
+				["subt", "Elecro night", ""]
+			]
+		],
+		[
+			122057.676206424,
+			[
+				["subt", "Eclectic undefined in the moonlight", ""]
+			]
+		],
+		[
+			124234.091947024,
+			[
+				["subt", "Shine bright how you'd like", ""]
+			]
+		],
+		[
+			125625.570863145,
+			[
+				["subt", "Broken faces empty spaces make okay", ""]
+			]
+		],
+		[
+			128444.207641955,
+			[
+				["Play Animation", "hey", "BF"]
+			]
+		],
+		[
+			128693.960267925,
+			[
+				["subt", "Let my mind open up to the skies and pray", ""]
+			]
+		],
+		[
+			131084.449687928,
+			[
+				["subt", "*breathing: the sequel to the prequel of the movie*", "FFFF00"]
+			]
+		],
+		[
+			131298.523367331,
+			[
+				["subt", "Raindrops like spots windshield spray", ""]
+			]
+		],
+		[
+			133581.975947633,
+			[
+				["subt", "Don't stop, don't yield knots in the stomach", ""]
+			]
+		],
+		[
+			135651.354848531,
+			[
+				["subt", "Not one, when you drop in the storm", ""]
+			]
+		],
+		[
+			137292.586390623,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			137578.01796316,
+			[
+				["subt", "storm", ""]
+			]
+		],
+		[
+			137863.449535698,
+			[
+				["subt", "", ""]
+			]
+		],
+		[
+			138148.881108236,
+			[
+				["Play Animation", "hey", "BF"]
+			]
+		],
+		[
+			155524.528086467,
+			[
+				["subt", "R", ""]
+			]
+		],
+		[
+			155560.207033034,
+			[
+				["subt", "RR", ""]
+			]
+		],
+		[
+			155595.885979601,
+			[
+				["subt", "RRR", ""]
+			]
+		],
+		[
+			155631.564926168,
+			[
+				["subt", "RRRAK", ""]
+			]
+		],
+		[
+			155916.996498706,
+			[
+				["subt", "RRRAK KA", ""]
+			]
+		],
+		[
+			155952.675445273,
+			[
+				["subt", "RRRAK KAA", ""]
+			]
+		],
+		[
+			155988.35439184,
+			[
+				["subt", "RRRAK KAAA", ""]
+			]
+		],
+		[
+			156024.033338408,
+			[
+				["subt", "RRRAK KAAAA", ""]
+			]
+		],
+		[
+			156059.712284975,
+			[
+				["subt", "RRRAK KAAAAA", ""]
+			]
+		],
+		[
+			156095.391231542,
+			[
+				["subt", "RRRAK KAAAAAA", ""]
+			]
+		],
+		[
+			156131.070178109,
+			[
+				["subt", "RRRAK KAAAAAAK", ""]
+			]
+		],
+		[
+			156416.501750647,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			156701.933323184,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			156844.649109453,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			156987.364895722,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			157130.080681991,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			157272.79646826,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			157415.512254529,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			157558.228040798,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			157700.943827066,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			157843.659613335,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			158129.091185873,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			158414.522758411,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			158699.954330948,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			158985.385903486,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			159270.817476024,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			159556.249048561,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			159698.96483483,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			159841.680621099,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			160127.112193637,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			160269.827979905,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			160412.543766174,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			160983.40691125,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Who is the eye between lies", ""]
+			]
+		],
+		[
+			162588.959506774,
+			[
+				["subt", "I lie and just try to make it through the night and sigh", ""]
+			]
+		],
+		[
+			165550.312071852,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			165835.74364439,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			165978.459430659,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			166121.175216928,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			166263.891003197,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			166406.606789465,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			166549.322575734,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			166692.038362003,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			166834.754148272,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			166977.469934541,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			167262.901507079,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			167548.333079616,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			167833.764652154,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			168119.196224692,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			168404.627797229,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			168690.059369767,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			168832.775156036,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			168975.490942305,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			169260.922514842,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			169403.638301111,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			169546.35408738,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			170117.217232455,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Conquest blessed like don't burn a nest", ""]
+			]
+		],
+		[
+			172400.669812757,
+			[
+				["subt", "Drugged outta style from the old dragnet", ""]
+			]
+		],
+		[
+			173827.827675445,
+			[
+				["subt", "Drugged outta style from the old dragnet (R", ""]
+			]
+		],
+		[
+			173851.613639823,
+			[
+				["subt", "Drugged outta style from the old dragnet (RR", ""]
+			]
+		],
+		[
+			173875.399604201,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRR", ""]
+			]
+		],
+		[
+			173899.18556858,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK", ""]
+			]
+		],
+		[
+			174184.617141117,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KA", ""]
+			]
+		],
+		[
+			174208.403105495,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAA", ""]
+			]
+		],
+		[
+			174232.189069873,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAAA", ""]
+			]
+		],
+		[
+			174255.975034252,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAAAA", ""]
+			]
+		],
+		[
+			174279.76099863,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAAAAA", ""]
+			]
+		],
+		[
+			174303.546963008,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAAAAAA", ""]
+			]
+		],
+		[
+			174327.332927386,
+			[
+				["subt", "Drugged outta style from the old dragnet (RRRAK KAAAAAAK", ""]
+			]
+		],
+		[
+			174684.122393058,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			174969.553965596,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			175112.269751865,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			175254.985538133,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			175397.701324402,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			175540.417110671,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			175683.13289694,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			175825.848683209,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			175968.564469478,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			176111.280255747,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			176396.711828284,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			176682.143400822,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			176967.57497336,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			177253.006545897,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			177538.438118435,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			177823.869690973,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			177966.585477241,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			178109.30126351,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			178394.732836048,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			178537.448622317,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			178680.164408586,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			179001.27492769,
+			[
+				["subt", "Everyone gets stung one runs", ""]
+			]
+		],
+		[
+			179251.027553661,
+			[
+				["Play Animation", "hey", "BF"]
+			]
+		],
+		[
+			180749.543309484,
+			[
+				["subt", "One air with precision drum", ""]
+			]
+		],
+		[
+			182355.095905008,
+			[
+				["subt", "That they overridden", ""]
+			]
+		],
+		[
+			183461.143248592,
+			[
+				["subt", "That they overridden (when", ""]
+			]
+		],
+		[
+			183603.859034861,
+			[
+				["subt", "That they overridden (when I)", ""]
+			]
+		],
+		[
+			183817.932714264,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			184103.364286801,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			184246.08007307,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			184388.795859339,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			184531.511645608,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			184674.227431877,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			184816.943218146,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			184959.659004414,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			185102.374790683,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			185245.090576952,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			185530.52214949,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			185815.953722028,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			186101.385294565,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			186386.816867103,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			186672.248439641,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			186957.680012178,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			187100.395798447,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			187243.111584716,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			187528.543157254,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			187671.258943522,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			187813.974729791,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			188099.406302329,
+			[
+				["subt", "(when", ""]
+			]
+		],
+		[
+			188170.764195463,
+			[
+				["subt", "(when I)", ""]
+			]
+		],
+		[
+			188384.837874867,
+			[
+				["Play Animation", "hey", "BF"],
+				["subt", "Rock", ""]
+			]
+		],
+		[
+			188670.269447404,
+			[
+				["subt", "Rock when", ""]
+			]
+		],
+		[
+			188812.985233673,
+			[
+				["subt", "Rock when I", ""]
+			]
+		],
+		[
+			188955.701019942,
+			[
+				["subt", "Rock when I rip", ""]
+			]
+		],
+		[
+			189098.416806211,
+			[
+				["subt", "Rock when I rip it", ""]
+			]
+		],
+		[
+			189241.13259248,
+			[
+				["subt", "When", ""]
+			]
+		],
+		[
+			189383.848378748,
+			[
+				["subt", "When I'm", ""]
+			]
+		],
+		[
+			189526.564165017,
+			[
+				["subt", "When I'm rol", ""]
+			]
+		],
+		[
+			189669.279951286,
+			[
+				["subt", "When I'm rollin'", ""]
+			]
+		],
+		[
+			189811.995737555,
+			[
+				["subt", "When I'm rollin' on", ""]
+			]
+		],
+		[
+			190097.427310093,
+			[
+				["subt", "When I'm rollin' on clouds", ""]
+			]
+		],
+		[
+			190382.85888263,
+			[
+				["subt", "Shout", ""]
+			]
+		],
+		[
+			190668.290455168,
+			[
+				["subt", "Shout loud", ""]
+			]
+		],
+		[
+			190953.722027706,
+			[
+				["subt", "Breathe", ""]
+			]
+		],
+		[
+			191239.153600243,
+			[
+				["subt", "Breathe in", ""]
+			]
+		],
+		[
+			191524.585172781,
+			[
+				["subt", "Won't", ""]
+			]
+		],
+		[
+			191667.30095905,
+			[
+				["subt", "Won't you", ""]
+			]
+		],
+		[
+			191810.016745319,
+			[
+				["subt", "DROWN", "931011"]
+			]
+		],
+		[
+			192095.448317856,
+			[
+				["subt", "DROWN IN", "931011"]
+			]
+		],
+		[
+			192238.164104125,
+			[
+				["subt", "DROWN IN THE", "931011"]
+			]
+		],
+		[
+			192380.879890394,
+			[
+				["subt", "DROWN IN THE NOW", "931011"]
+			]
+		],
+		[
+			193380.879890394,
+			[
+				["subt", "", ""]
+			]
+		]
+	],
+	"format": "psych_v1"
+}

@@ -1,1 +1,2 @@
-This is where you should put the story mode menu backgrounds! (Examples: assets/base_game/shared/images/menubackgrounds/)
+Put your week backgrounds here!
+They must start with "menu_"

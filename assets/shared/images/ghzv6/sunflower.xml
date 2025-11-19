@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sunflower.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="sunflower0000" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0001" x="253" y="27" width="224" height="287" frameX="-4" frameY="-10" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0002" x="27" y="321" width="232" height="292" frameX="0" frameY="-5" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0003" x="266" y="321" width="212" height="293" frameX="-10" frameY="-4" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0004" x="27" y="621" width="220" height="297" frameX="-6" frameY="0" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0005" x="254" y="621" width="214" height="293" frameX="-9" frameY="-4" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0006" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0007" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0008" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0009" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0010" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0011" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0012" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0013" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0014" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0015" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0016" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0017" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0018" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0019" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0020" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0021" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0022" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0023" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0024" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0025" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0026" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0027" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0028" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+	<SubTexture name="sunflower0029" x="27" y="27" width="219" height="285" frameX="-6" frameY="-12" frameWidth="232" frameHeight="297"/>
+</TextureAtlas>

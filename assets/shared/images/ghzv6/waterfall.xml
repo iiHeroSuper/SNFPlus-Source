@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="waterfall.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="a bunch of assets to make the water to fall0000" x="27" y="27" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0001" x="284" y="27" width="247" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0002" x="538" y="27" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0003" x="805" y="27" width="252" height="270" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0004" x="1064" y="27" width="250" height="270" frameX="-6" frameY="0" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0005" x="1321" y="27" width="253" height="269" frameX="-3" frameY="0" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0006" x="1581" y="27" width="260" height="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0007" x="27" y="308" width="249" height="271" frameX="-4" frameY="0" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0008" x="283" y="308" width="250" height="270" frameX="-6" frameY="0" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0009" x="540" y="308" width="247" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0010" x="794" y="308" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0011" x="1061" y="308" width="252" height="270" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0012" x="1320" y="308" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0013" x="1577" y="308" width="253" height="268" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0014" x="27" y="588" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0015" x="294" y="588" width="249" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0016" x="550" y="588" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0017" x="807" y="588" width="247" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0018" x="1061" y="588" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0019" x="1328" y="588" width="252" height="269" frameX="-3" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0020" x="1587" y="588" width="250" height="268" frameX="-6" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0021" x="27" y="868" width="253" height="267" frameX="-3" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0022" x="287" y="868" width="260" height="272" frameX="0" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0023" x="554" y="868" width="249" height="269" frameX="-4" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0024" x="810" y="868" width="250" height="268" frameX="-6" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0025" x="1067" y="868" width="247" height="268" frameX="-4" frameY="-3" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0026" x="1321" y="868" width="260" height="271" frameX="0" frameY="-3" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0027" x="1588" y="868" width="252" height="268" frameX="-3" frameY="-3" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0028" x="27" y="1147" width="250" height="267" frameX="-6" frameY="-3" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0029" x="284" y="1147" width="253" height="267" frameX="-3" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0030" x="544" y="1147" width="260" height="272" frameX="0" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0031" x="811" y="1147" width="249" height="269" frameX="-4" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0032" x="1067" y="1147" width="250" height="268" frameX="-6" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0033" x="1324" y="1147" width="247" height="269" frameX="-4" frameY="-2" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0034" x="1578" y="1147" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0035" x="27" y="1427" width="252" height="270" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0036" x="286" y="1427" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0037" x="543" y="1427" width="253" height="268" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0038" x="803" y="1427" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0039" x="1070" y="1427" width="249" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0040" x="1326" y="1427" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0041" x="1583" y="1427" width="247" height="270" frameX="-4" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0042" x="27" y="1707" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0043" x="294" y="1707" width="252" height="270" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0044" x="553" y="1707" width="250" height="269" frameX="-6" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0045" x="810" y="1707" width="253" height="268" frameX="-3" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0046" x="1070" y="1707" width="260" height="273" frameX="0" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0047" x="1337" y="1707" width="249" height="269" frameX="-2" frameY="-1" frameWidth="260" frameHeight="274"/>
+	<SubTexture name="a bunch of assets to make the water to fall0048" x="1593" y="1707" width="247" height="268" frameX="-4" frameY="-3" frameWidth="260" frameHeight="274"/>
+</TextureAtlas>

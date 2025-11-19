@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="storyfreeplates.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="platesappear0000" x="0" y="0" width="3218" height="1183"/>
+	<SubTexture name="platesappear0001" x="3218" y="0" width="2458" height="1183" frameX="-360" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0002" x="5676" y="0" width="2265" height="1183" frameX="-448" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0003" x="0" y="1183" width="2128" height="1183" frameX="-510" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0004" x="2128" y="1183" width="2045" height="1183" frameX="-548" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0005" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0006" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0007" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0008" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0009" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0010" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0011" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platesappear0012" x="4173" y="1183" width="2018" height="1183" frameX="-560" frameY="0" frameWidth="3218" frameHeight="1183"/>
+	<SubTexture name="platespressfp0000" x="0" y="2366" width="2018" height="1197"/>
+	<SubTexture name="platespressfp0001" x="0" y="2366" width="2018" height="1197"/>
+	<SubTexture name="platespressfp0002" x="2018" y="2366" width="2018" height="1187" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0003" x="2018" y="2366" width="2018" height="1187" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0004" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0005" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0006" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0007" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0008" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressfp0009" x="4036" y="2366" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0000" x="6054" y="2366" width="2018" height="1191" frameX="0" frameY="-6" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0001" x="6054" y="2366" width="2018" height="1191" frameX="0" frameY="-6" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0002" x="0" y="3563" width="2018" height="1183" frameX="0" frameY="-4" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0003" x="0" y="3563" width="2018" height="1183" frameX="0" frameY="-4" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0004" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0005" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0006" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0007" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0008" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platespressst0009" x="2018" y="3563" width="2018" height="1183" frameX="0" frameY="0" frameWidth="2018" frameHeight="1197"/>
+	<SubTexture name="platesvanish0000" x="4036" y="3563" width="2018" height="1183" frameX="-1316" frameY="0" frameWidth="4574" frameHeight="1183"/>
+	<SubTexture name="platesvanish0001" x="6054" y="3563" width="2046" height="1183" frameX="-1302" frameY="0" frameWidth="4574" frameHeight="1183"/>
+	<SubTexture name="platesvanish0002" x="0" y="4746" width="3451" height="1183" frameX="-578" frameY="0" frameWidth="4574" frameHeight="1183"/>
+	<SubTexture name="platesvanish0003" x="3451" y="4746" width="4294" height="1183" frameX="-144" frameY="0" frameWidth="4574" frameHeight="1183"/>
+	<SubTexture name="platesvanish0004" x="0" y="5929" width="4574" height="1183"/>
+</TextureAtlas>

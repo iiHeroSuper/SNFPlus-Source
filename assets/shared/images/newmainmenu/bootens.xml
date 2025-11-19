@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bootens.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="awards hit0000" x="27" y="27" width="198" height="179" frameX="-4" frameY="-3" frameWidth="205" frameHeight="183"/>
+	<SubTexture name="awards hit0001" x="232" y="27" width="200" height="180" frameX="-2" frameY="-1" frameWidth="205" frameHeight="183"/>
+	<SubTexture name="awards hit0002" x="439" y="27" width="203" height="182" frameX="-1" frameY="0" frameWidth="205" frameHeight="183"/>
+	<SubTexture name="awards hit0003" x="649" y="27" width="205" height="183"/>
+	<SubTexture name="awards hit0004" x="861" y="27" width="205" height="183"/>
+	<SubTexture name="awards norm0000" x="1073" y="27" width="195" height="176"/>
+	<SubTexture name="credits hit0000" x="1275" y="27" width="462" height="151" frameX="-8" frameY="-4" frameWidth="475" frameHeight="160"/>
+	<SubTexture name="credits hit0001" x="27" y="217" width="465" height="153" frameX="-6" frameY="-4" frameWidth="475" frameHeight="160"/>
+	<SubTexture name="credits hit0002" x="499" y="217" width="470" height="156" frameX="-3" frameY="-3" frameWidth="475" frameHeight="160"/>
+	<SubTexture name="credits hit0003" x="976" y="217" width="472" height="158" frameX="-2" frameY="-2" frameWidth="475" frameHeight="160"/>
+	<SubTexture name="credits hit0004" x="1455" y="217" width="475" height="160"/>
+	<SubTexture name="credits norm0000" x="27" y="384" width="458" height="146"/>
+	<SubTexture name="credits teelt0000" x="492" y="384" width="528" height="146"/>
+	<SubTexture name="flarp0000" x="1027" y="384" width="497" height="142" frameX="-32" frameY="0" frameWidth="534" frameHeight="142"/>
+	<SubTexture name="flarp0001" x="27" y="537" width="529" height="133" frameX="-3" frameY="-8" frameWidth="534" frameHeight="142"/>
+	<SubTexture name="flarp0002" x="563" y="537" width="534" height="130" frameX="0" frameY="-5" frameWidth="534" frameHeight="142"/>
+	<SubTexture name="gallery hit0000" x="1104" y="537" width="483" height="143" frameX="-7" frameY="-3" frameWidth="490" frameHeight="147"/>
+	<SubTexture name="gallery hit0001" x="27" y="687" width="485" height="144" frameX="-4" frameY="-1" frameWidth="490" frameHeight="147"/>
+	<SubTexture name="gallery hit0002" x="519" y="687" width="489" height="146" frameX="-1" frameY="0" frameWidth="490" frameHeight="147"/>
+	<SubTexture name="gallery hit0003" x="1015" y="687" width="490" height="147"/>
+	<SubTexture name="gallery hit0004" x="1512" y="687" width="490" height="147"/>
+	<SubTexture name="gallery norm0000" x="27" y="841" width="480" height="140"/>
+	<SubTexture name="gallery teelt0000" x="514" y="841" width="526" height="140"/>
+	<SubTexture name="go there0000" x="1047" y="841" width="113" height="125" frameX="-21" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0001" x="1167" y="841" width="217" height="133"/>
+	<SubTexture name="go there0002" x="1047" y="841" width="113" height="125" frameX="-84" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0003" x="1047" y="841" width="113" height="125" frameX="-79" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0004" x="1047" y="841" width="113" height="125" frameX="-79" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0005" x="1047" y="841" width="113" height="125" frameX="-25" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0006" x="1047" y="841" width="113" height="125" frameX="-21" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0007" x="1047" y="841" width="113" height="125" frameX="-21" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="go there0008" x="1047" y="841" width="113" height="125" frameX="-21" frameY="-2" frameWidth="217" frameHeight="133"/>
+	<SubTexture name="play hit0000" x="1391" y="841" width="377" height="155" frameX="-3" frameY="-3" frameWidth="388" frameHeight="165"/>
+	<SubTexture name="play hit0001" x="27" y="1003" width="381" height="157" frameX="-1" frameY="-2" frameWidth="388" frameHeight="165"/>
+	<SubTexture name="play hit0002" x="415" y="1003" width="385" height="161" frameX="0" frameY="-1" frameWidth="388" frameHeight="165"/>
+	<SubTexture name="play hit0003" x="807" y="1003" width="387" height="164" frameX="0" frameY="0" frameWidth="388" frameHeight="165"/>
+	<SubTexture name="play hit0004" x="1201" y="1003" width="388" height="165"/>
+	<SubTexture name="play norm0000" x="1596" y="1003" width="374" height="152"/>
+	<SubTexture name="play teelt0000" x="27" y="1175" width="479" height="152"/>
+	<SubTexture name="settings hit0000" x="513" y="1175" width="198" height="167" frameX="-6" frameY="-5" frameWidth="206" frameHeight="173"/>
+	<SubTexture name="settings hit0001" x="718" y="1175" width="201" height="168" frameX="-3" frameY="-2" frameWidth="206" frameHeight="173"/>
+	<SubTexture name="settings hit0002" x="926" y="1175" width="204" height="171" frameX="-1" frameY="-1" frameWidth="206" frameHeight="173"/>
+	<SubTexture name="settings hit0003" x="1137" y="1175" width="206" height="172" frameX="0" frameY="0" frameWidth="206" frameHeight="173"/>
+	<SubTexture name="settings hit0004" x="1350" y="1175" width="206" height="173"/>
+	<SubTexture name="settings norm0000" x="1563" y="1175" width="195" height="164"/>
+	<SubTexture name="soundtest hit0000" x="27" y="1355" width="541" height="138" frameX="-6" frameY="-6" frameWidth="548" frameHeight="145"/>
+	<SubTexture name="soundtest hit0001" x="575" y="1355" width="542" height="140" frameX="-3" frameY="-3" frameWidth="548" frameHeight="145"/>
+	<SubTexture name="soundtest hit0002" x="1124" y="1355" width="546" height="143" frameX="-1" frameY="-1" frameWidth="548" frameHeight="145"/>
+	<SubTexture name="soundtest hit0003" x="27" y="1505" width="547" height="145" frameX="0" frameY="0" frameWidth="548" frameHeight="145"/>
+	<SubTexture name="soundtest hit0004" x="581" y="1505" width="548" height="145"/>
+	<SubTexture name="soundtest norm0000" x="1136" y="1505" width="538" height="135"/>
+	<SubTexture name="soundtest teelt0000" x="27" y="1657" width="582" height="135"/>
+</TextureAtlas>

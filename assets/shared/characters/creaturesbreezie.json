@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [84, -402],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "BREEZIE_D1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [84, -400],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "BREEZIE_D2",
+			"indices": []
+		},
+		{
+			"offsets": [75, -408],
+			"indices": [],
+			"fps": 24,
+			"anim": "sad",
+			"loop": false,
+			"name": "BREEZIE_Miss"
+		},
+		{
+			"offsets": [88, -396],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "BREEZIE_Left"
+		},
+		{
+			"offsets": [84, -403],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "BREEZIE_Down"
+		},
+		{
+			"offsets": [75, -392],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "BREEZIE_Up"
+		},
+		{
+			"offsets": [74, -395],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "BREEZIE_Right"
+		},
+		{
+			"offsets": [75, -408],
+			"indices": [],
+			"fps": 24,
+			"anim": "hurt",
+			"loop": false,
+			"name": "BREEZIE_Miss"
+		},
+		{
+			"offsets": [84, -402],
+			"indices": [],
+			"fps": 24,
+			"anim": "hey",
+			"loop": false,
+			"name": "BREEZIE_Idle"
+		}
+	],
+	"vocals_file": "breezie",
+	"no_antialiasing": false,
+	"image": "characters/BreezieFuckle",
+	"position": [170, -295],
+	"healthicon": "breezie",
+	"flip_x": false,
+	"healthbar_colors": [128, 201, 158],
+	"camera_position": [110, 300],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

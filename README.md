@@ -1,11 +1,11 @@
-# Sonic Night Funkin v5.0 (Lily "ZesCrew2")
+# Sonic VS Every1 // SNF' PLUS by Lily (ZesCrew2) and Arie "Herox" Temps
 
-Welcome to our *(poorly protected)* source code! This is a shittily put together amalgam of psych engine versions hoping something will work
-with the skin of a mod from yester-year!
+Welcome to our *(poorly protected)* source code! This is the final update of the mod, at the time of writing this the 5 year anniversary of the mod is coming up soon (Jan 5th 2021)
+THAT means it's time to celebrate!!! >:D
 
 Edit this code IF YOU DARE!!
 
-![SNFLogo](https://cdn.discordapp.com/attachments/1366820283037651128/1383434072424185926/snf-logo-spin-yay.gif?ex=684ec6e1&is=684d7561&hm=d98d471adbe836070ad559a2951c5288af6a55d74a8106dece1fa19adf0319ec&)
+![SNFLogo](https://xatimg.com/image/uiWVGXYtTzRQ.png)
 
 ----------------------------------------------------
 
