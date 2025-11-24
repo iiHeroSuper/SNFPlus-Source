@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [-17, -337],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
+		},
+		{
+			"offsets": [-107, -347],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
+		},
+		{
+			"offsets": [-107, -277],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
+		},
+		{
+			"offsets": [-155, -357],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
+		},
+		{
+			"loop": true,
+			"offsets": [-107, -347],
+			"anim": "NoAnim",
+			"fps": 24,
+			"name": "Idle",
+			"indices": [12, 12, 14, 14]
+		},
+		{
+			"offsets": [-107, -347],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		}
+	],
+	"vocals_file": "metalsonic",
+	"no_antialiasing": false,
+	"image": "characters/v6/metalsonicv6FINAL",
+	"position": [-100, 0],
+	"healthicon": "metalsonic",
+	"flip_x": false,
+	"healthbar_colors": [254, 254, 254],
+	"camera_position": [180, 330],
+	"sing_duration": 6.1,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

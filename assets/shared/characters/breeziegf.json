@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
-			"offsets": [112, -230],
 			"loop": false,
-			"fps": 24,
+			"offsets": [114, -228],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Left"
+			"fps": 24,
+			"name": "Left",
+			"indices": []
 		},
 		{
-			"offsets": [90, -233],
 			"loop": false,
-			"fps": 24,
+			"offsets": [87, -233],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Down"
+			"fps": 24,
+			"name": "Down",
+			"indices": []
 		},
 		{
-			"offsets": [91, -152],
 			"loop": false,
-			"fps": 24,
+			"offsets": [88, -151],
 			"anim": "singUP",
-			"indices": [],
-			"name": "Up"
+			"fps": 24,
+			"name": "Up",
+			"indices": []
 		},
 		{
-			"offsets": [90, -230],
 			"loop": false,
-			"fps": 24,
+			"offsets": [87, -230],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Right"
+			"fps": 24,
+			"name": "Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [96, -230],
+			"anim": "hurt",
+			"fps": 24,
+			"name": "Oops",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [104, -230],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "DanceLeft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [92, -230],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "DanceRight",
+			"indices": []
+		},
+		{
+			"offsets": [92, -230],
 			"loop": false,
 			"fps": 24,
-			"anim": "hurt",
+			"anim": "sad",
 			"indices": [],
 			"name": "Oops"
 		},
 		{
-			"offsets": [457, -227],
-			"loop": false,
+			"offsets": [88, -151],
+			"indices": [],
 			"fps": 24,
 			"anim": "hey",
-			"indices": [],
-			"name": "i am confusion"
-		},
-		{
-			"offsets": [104, -230],
 			"loop": false,
-			"fps": 24,
-			"anim": "danceLeft",
-			"indices": [],
-			"name": "DanceLeft"
-		},
-		{
-			"offsets": [95, -230],
-			"loop": false,
-			"fps": 24,
-			"anim": "danceRight",
-			"indices": [],
-			"name": "DanceRight"
-		},
-		{
-			"loop": false,
-			"offsets": [96, -230],
-			"anim": "sad",
-			"fps": 24,
-			"name": "Oops",
-			"indices": []
+			"name": "Up"
 		}
 	],
 	"vocals_file": "breezie",
 	"no_antialiasing": false,
-	"image": "characters/breeziegf",
+	"image": "characters/v6/breeziev6FINAL",
 	"position": [150, -165],
 	"healthicon": "breezie",
 	"flip_x": false,
