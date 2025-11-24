@@ -19,6 +19,22 @@ import states.StoryMenuState;
 import states.OutdatedState;
 import states.MainMenuState;
 
+// --- VIDEO IMPORTS ---
+#if VIDEOS_ALLOWED
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import flixel.util.FlxColor;
+import openfl.utils.Assets as OpenFlAssets;
+
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
+
+import hxcodec.flixel.FlxVideoSprite as VideoHandler;
+#end
+// -----------------------------
+
 typedef TitleData =
 {
 	titlex:Float,
@@ -49,6 +65,7 @@ class TitleState extends MusicBeatState
 	var titleTextAlphas:Array<Float> = [1, .64];
 
 	var curWacky:Array<String> = [];
+	var curAss:Array<String> = [];
 
 	var wackyImage:FlxSprite;
 
@@ -61,8 +78,15 @@ class TitleState extends MusicBeatState
 	#end
 
 	var mustUpdate:Bool = false;
-
 	var titleJSON:TitleData;
+	
+	// --- VIDEO STATE VARIABLES ---
+	var videoPlaying:Bool = false;
+	
+	#if VIDEOS_ALLOWED
+	var video:VideoHandler;
+	#end
+	// ----------------------------
 
 	public static var updateVersion:String = '';
 
@@ -75,6 +99,8 @@ class TitleState extends MusicBeatState
 		super.create();
 		
 		curWacky = FlxG.random.getObject(getIntroTextShit());
+		curAss = FlxG.random.getObject(getAssText());
+
 
 		#if CHECK_FOR_UPDATES
 		if(ClientPrefs.data.checkForUpdates && !closedState) {
@@ -142,21 +168,28 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		MusicBeatState.switchState(new ChartingState());
 		#else
+		
+		// --- START VIDEO LOGIC (Only runs on first load) ---
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState());
 		} else {
 			if (initialized)
+			{
 				startIntro();
+			}
 			else
 			{
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				// Short delay to ensure state is ready before video tries to attach
+				new FlxTimer().start(0.1, function(tmr:FlxTimer)
 				{
-					startIntro();
+					startVideo('segasplash'); 
 				});
 			}
 		}
+		// --------------------------------------------------
+		
 		#end
 	}
 
@@ -176,7 +209,6 @@ class TitleState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite();
 		bg.antialiasing = ClientPrefs.data.antialiasing;
-
 		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none"){
 			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
 		}else{
@@ -200,9 +232,10 @@ class TitleState extends MusicBeatState
 		if(ClientPrefs.data.shaders) swagShader = new ColorSwap();
 		gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
-
+		
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
-		if(easterEgg == null) easterEgg = ''; //html5 fix
+		if(easterEgg == null) easterEgg = '';
+		//html5 fix
 
 		switch(easterEgg.toUpperCase())
 		{
@@ -241,6 +274,7 @@ class TitleState extends MusicBeatState
 
 		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
+		
 		var animFrames:Array<FlxFrame> = [];
 		@:privateAccess {
 			titleText.animation.findByPrefix(animFrames, "ENTER IDLE");
@@ -249,13 +283,11 @@ class TitleState extends MusicBeatState
 		
 		if (animFrames.length > 0) {
 			newTitle = true;
-			
 			titleText.animation.addByPrefix('idle', "ENTER IDLE", 24);
 			titleText.animation.addByPrefix('press', ClientPrefs.data.flashing ? "ENTER PRESSED" : "ENTER FREEZE", 24);
 		}
 		else {
 			newTitle = false;
-			
 			titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 			titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
 		}
@@ -282,7 +314,6 @@ class TitleState extends MusicBeatState
 
 		credTextShit = new Alphabet(0, 0, "", true);
 		credTextShit.screenCenter();
-
 		// credTextShit.alignment = CENTER;
 
 		credTextShit.visible = false;
@@ -295,10 +326,8 @@ class TitleState extends MusicBeatState
 		ngSpr.screenCenter(X);
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
-		if (initialized)
-			skipIntro();
-		else
-			initialized = true;
+		// the video will call startIntro() itself, so we just set initialized here
+		initialized = true; 
 
 		Paths.clearUnusedMemory();
 		// credGroup.add(credTextShit);
@@ -322,9 +351,26 @@ class TitleState extends MusicBeatState
 		return swagGoodArray;
 	}
 
+	function getAssText():Array<Array<String>>
+	{
+		#if MODS_ALLOWED
+		var firstArray:Array<String> = Mods.mergeAllTextsNamed('data/notAssociated.txt');
+		#else
+		var fullText:String = Assets.getText(Paths.txt('notAssociated'));
+		var firstArray:Array<String> = fullText.split('\n');
+		#end
+		var swagGoodArray:Array<Array<String>> = [];
+
+		for (i in firstArray)
+		{
+			swagGoodArray.push(i.split('--'));
+		}
+
+		return swagGoodArray;
+	}
+
 	var transitioning:Bool = false;
 	private static var playJingle:Bool = false;
-	
 	var newTitle:Bool = false;
 	var titleTimer:Float = 0;
 
@@ -335,6 +381,24 @@ class TitleState extends MusicBeatState
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT;
+		
+		// --- VIDEO SKIP CHECK ---
+		if (videoPlaying) {
+			if (pressedEnter || FlxG.keys.justPressed.SPACE) {
+				FlxG.log.notice("Video skipped by player input.");
+				
+				#if VIDEOS_ALLOWED
+				if(video != null) {
+					if(video.bitmap != null && video.bitmap.onEndReached != null)
+						video.bitmap.onEndReached.dispatch();
+				}
+				#end
+				
+				videoPlaying = false;
+				FlxG.keys.enabled = true; 
+			}
+			return;
+		}
 
 		#if mobile
 		for (touch in FlxG.touches.list)
@@ -347,7 +411,6 @@ class TitleState extends MusicBeatState
 		#end
 
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
-
 		if (gamepad != null)
 		{
 			if (gamepad.justPressed.START)
@@ -470,6 +533,58 @@ class TitleState extends MusicBeatState
 		super.update(elapsed);
 	}
 
+	public function startVideo(name:String)
+	{
+		#if VIDEOS_ALLOWED
+		var filepath:String = Paths.video(name);
+		
+		#if sys
+		if(!sys.FileSystem.exists(filepath))
+		#else
+		if(!OpenFlAssets.exists(filepath))
+		#end
+		{
+			trace('Video file not found at: ' + filepath);
+			startIntro();
+			return;
+		}
+
+		videoPlaying = true;
+		
+		video = new VideoHandler();
+		video.play(filepath);
+		add(video);
+		
+		video.bitmap.onEndReached.add(function() 
+		{
+			video.destroy();
+			if(videoPlaying) {
+				videoPlaying = false;
+				startIntro();
+			}
+		});
+
+		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		{
+			if(video == null || !video.exists) {
+				tmr.cancel();
+				return;
+			}
+
+			if(video.bitmap != null && video.bitmap.bitmapData != null && video.bitmap.bitmapData.width > 0) {
+				video.setGraphicSize(FlxG.width, FlxG.height);
+				video.updateHitbox();
+				video.screenCenter();
+				tmr.cancel();
+			}
+		}, 0); 
+		
+		#else
+		trace('Videos not allowed on this platform!');
+		startIntro();
+		#end
+	}
+
 	function createCoolText(textArray:Array<String>, ?offset:Float = 0)
 	{
 		for (i in 0...textArray.length)
@@ -504,8 +619,9 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
+	private var sickBeats:Int = 0;
 	public static var closedState:Bool = false;
+
 	override function beatHit()
 	{
 		super.beatHit();
@@ -526,20 +642,19 @@ class TitleState extends MusicBeatState
 			switch (sickBeats)
 			{
 				case 1:
-					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					createCoolText(['Presented By'], 40);
+					createCoolText(['Psych Engine by'], 40);
 				case 4:
-					addMoreText('ZesCrew2', 40);
-					addMoreText('Nu-SNF TEAM', 40);
+					addMoreText('Shadow Mario', 40);
+					addMoreText('Riveren', 40);
 				case 5:
 					deleteCoolText();
 				case 6:
-					createCoolText(['Not associated', 'with'], -40);
+					createCoolText([curAss[0]], -40);
 				case 8:
-					addMoreText('Sega', -40);
+					addMoreText(curAss[1], -40);
 					ngSpr.visible = true;
 				case 9:
 					deleteCoolText();
@@ -570,7 +685,7 @@ class TitleState extends MusicBeatState
 		if (!skippedIntro)
 		{
 			#if TITLE_SCREEN_EASTER_EGG
-			if (playJingle) //Ignore deez
+			if (playJingle)
 			{
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
@@ -586,7 +701,7 @@ class TitleState extends MusicBeatState
 					case 'BBPANZU':
 						sound = FlxG.sound.play(Paths.sound('JingleBB'));
 
-					default: //Go back to normal ugly ass boring GF
+					default:
 						remove(ngSpr);
 						remove(credGroup);
 						FlxG.camera.flash(FlxColor.WHITE, 2);
@@ -622,10 +737,12 @@ class TitleState extends MusicBeatState
 				}
 				playJingle = false;
 			}
-			else #end //Default! Edit this one!!
+			else
+			#end 
 			{
 				remove(ngSpr);
 				remove(credGroup);
+
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
@@ -641,8 +758,17 @@ class TitleState extends MusicBeatState
 					}
 				}
 				#end
+
+				MainMenuState.psychEngineIntro = true;
+				
+				skippedIntro = true;
+				transitioning = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
+
+				MusicBeatState.switchState(new MainMenuState());
 			}
-			skippedIntro = true;
 		}
 	}
 }
