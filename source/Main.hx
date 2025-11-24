@@ -49,11 +49,9 @@ class Main extends Sprite
 		skipSplash: true, // if the default flixel splash screen should be skipped
 		startFullscreen: false // if the game should start at fullscreen mode
 	};
-
 	public static var fpsVar:FPSCounter;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
-
 	public static function main():Void
 	{
 		Lib.current.addChild(new Main());
@@ -78,9 +76,9 @@ class Main extends Sprite
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
-		#if VIDEOS_ALLOWED
-		hxvlc.util.Handle.init(#if (hxvlc >= "1.8.0")  ['--no-lua'] #end);
-		#end
+		
+		// REMOVED hxvlc INITIALIZATION
+		// hxCodec does not require this manual handle init
 	}
 
 	private function init(?E:Event):Void
@@ -97,7 +95,6 @@ class Main extends Sprite
 	{
 		var stageWidth:Int = Lib.current.stage.stageWidth;
 		var stageHeight:Int = Lib.current.stage.stageHeight;
-
 		if (game.zoom == -1.0)
 		{
 			var ratioX:Float = stageWidth / game.width;
@@ -116,12 +113,12 @@ class Main extends Sprite
 
 		Highscore.load();
 
-		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call)); #end
+		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call));
+		#end
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
 		#if ACHIEVEMENTS_ALLOWED Achievements.load(); #end
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
-
 		#if !mobile
 		fpsVar = new FPSCounter(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
@@ -187,7 +184,6 @@ class Main extends Sprite
 
 		dateNow = dateNow.replace(" ", "_");
 		dateNow = dateNow.replace(":", "'");
-
 		path = "./crash/" + "PsychEngine_" + dateNow + ".txt";
 
 		for (stackItem in callStack)
@@ -213,7 +209,6 @@ class Main extends Sprite
 
 		if (!FileSystem.exists("./crash/"))
 			FileSystem.createDirectory("./crash/");
-
 		File.saveContent(path, errMsg + "\n");
 
 		Sys.println(errMsg);

@@ -34,8 +34,6 @@ class Achievements {
 		createAchievement('week6_nomiss',			{name: "Limbo Rapper Extraordinaire", description: "Beat Week 6 with no Misses."});
 		createAchievement('week7_nomiss',			{name: "Hat of Honor and Gold", description: "Beat Week 7 with no Misses."});
 		createAchievement('week8_nomiss',			{name: "Ya Beat Her At Her Own Game", description: "Beat Week 8 with no Misses."});
-		createAchievement('week9_nomiss',			{name: "placeholder", description: "Beat Week 9 with no Misses."});
-		createAchievement('week10_nomiss',			{name: "placeholder", description: "Beat Week 10 with no Misses."});
 		createAchievement('weekendsandk_nomiss',		{name: "Better Than the Rest of Em", description: "Beat Weekend S&K with no Misses."});
 		createAchievement('sidestory1_nomiss',			{name: "how...", description: "Beat Side-Story 1 with no Misses."});
 		createAchievement('sidestory2_nomiss',			{name: "BOBULE BEEN BEATED WOWWW", description: "Beat Side-Story 2 with no Misses."});

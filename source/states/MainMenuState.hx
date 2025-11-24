@@ -1,6 +1,3 @@
-// penispenispenispenispenispenispenis
-// by tyler :3
-
 package states;
 
 import flixel.FlxG;
