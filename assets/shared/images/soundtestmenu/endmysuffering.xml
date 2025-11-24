@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TextureAtlas imagePath="tinybreezie.png">
-	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
-	<!-- http://www.adobe.com/products/flash.html -->
-	<SubTexture name="tiny breezie0000" x="0" y="0" width="382" height="444" frameX="0" frameY="-1" frameWidth="382" frameHeight="445"/>
-	<SubTexture name="tiny breezie0001" x="0" y="0" width="382" height="444" frameX="0" frameY="-1" frameWidth="382" frameHeight="445"/>
-	<SubTexture name="tiny breezie0002" x="0" y="444" width="382" height="445"/>
-	<SubTexture name="tiny breezie0003" x="0" y="444" width="382" height="445"/>
-</TextureAtlas>
