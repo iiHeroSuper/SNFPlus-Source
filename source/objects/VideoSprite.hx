@@ -1,9 +1,11 @@
+// script by tyler :3 (this took me hours.)
+
 package objects;
 
 import flixel.addons.display.FlxPieDial;
 
-#if hxvlc
-import hxvlc.flixel.FlxVideoSprite;
+#if hxCodec
+import hxcodec.flixel.FlxVideoSprite;
 #end
 
 class VideoSprite extends FlxSpriteGroup {
@@ -13,7 +15,11 @@ class VideoSprite extends FlxSpriteGroup {
 
 	final _timeToSkip:Float = 1;
 	public var holdingTime:Float = 0;
+	
+	#if hxCodec
 	public var videoSprite:FlxVideoSprite;
+	#end
+	
 	public var skipSprite:FlxPieDial;
 	public var cover:FlxSprite;
 	public var canSkip(default, set):Bool = false;
@@ -23,7 +29,7 @@ class VideoSprite extends FlxSpriteGroup {
 	public var waiting:Bool = false;
 	public var didPlay:Bool = false;
 
-	public function new(videoName:String, isWaiting:Bool, canSkip:Bool = false, shouldLoop:Dynamic = false) {
+	public function new(videoName:String, isWaiting:Bool, canSkip:Bool = false, shouldLoop:Bool = false) {
 		super();
 
 		this.videoName = videoName;
@@ -41,14 +47,19 @@ class VideoSprite extends FlxSpriteGroup {
 		}
 
 		// initialize sprites
+		#if hxCodec
 		videoSprite = new FlxVideoSprite();
 		videoSprite.antialiasing = ClientPrefs.data.antialiasing;
 		add(videoSprite);
+		#end
+		
 		if(canSkip) this.canSkip = true;
 
 		// callbacks
+		#if hxCodec
 		if(!shouldLoop)
 		{
+			// FIX: Access signal via .bitmap
 			videoSprite.bitmap.onEndReached.add(function() {
 				if(alreadyDestroyed) return;
 	
@@ -65,23 +76,21 @@ class VideoSprite extends FlxSpriteGroup {
 			});
 		}
 
-		videoSprite.bitmap.onFormatSetup.add(function()
-		{
-			/*
-			#if hxvlc
-			var wd:Int = videoSprite.bitmap.formatWidth;
-			var hg:Int = videoSprite.bitmap.formatHeight;
-			trace('Video Resolution: ${wd}x${hg}');
-			videoSprite.scale.set(FlxG.width / wd, FlxG.height / hg);
-			#end
-			*/
-			videoSprite.setGraphicSize(FlxG.width);
-			videoSprite.updateHitbox();
-			videoSprite.screenCenter();
-		});
+		// hxCodec doesn't need onFormatSetup usually, we just play the video
+		// we set the size immediately after play, or let it handle itself.
+		// for safety, we just ensure it's centered.
+		#end
 
 		// start video and adjust resolution to screen size
-		videoSprite.load(videoName, shouldLoop ? ['input-repeat=65545'] : null);
+		#if hxCodec
+		var filepath:String = Paths.video(videoName);
+		videoSprite.play(filepath, shouldLoop);
+		
+		// force strict sizing to screen
+		videoSprite.setGraphicSize(FlxG.width, FlxG.height);
+		videoSprite.updateHitbox();
+		videoSprite.screenCenter();
+		#end
 	}
 
 	var alreadyDestroyed:Bool = false;
@@ -126,7 +135,13 @@ class VideoSprite extends FlxSpriteGroup {
 			{
 				if(onSkip != null) onSkip();
 				finishCallback = null;
-				videoSprite.bitmap.onEndReached.dispatch();
+				
+				#if hxCodec
+				// this is taking so fucking long.. access signal via .bitmap to dispatch
+				if(videoSprite != null && videoSprite.bitmap.onEndReached != null)
+					videoSprite.bitmap.onEndReached.dispatch();
+				#end
+				
 				PlayState.instance.remove(this);
 				trace('Skipped video');
 				return;
@@ -162,12 +177,17 @@ class VideoSprite extends FlxSpriteGroup {
 	function updateSkipAlpha()
 	{
 		if(skipSprite == null) return;
-
 		skipSprite.amount = Math.min(1, Math.max(0, (holdingTime / _timeToSkip) * 1.025));
 		skipSprite.alpha = FlxMath.remapToRange(skipSprite.amount, 0.025, 1, 0, 1);
 	}
 
-	public function resume() videoSprite?.resume();
-	public function pause() videoSprite?.pause();
+	#if hxCodec
+	public function resume() if(videoSprite != null) videoSprite.resume();
+	public function pause() if(videoSprite != null) videoSprite.pause();
+	#else
+	public function resume() {}
+	public function pause() {}
+	#end
+
 	#end
 }
