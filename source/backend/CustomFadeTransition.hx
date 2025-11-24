@@ -39,7 +39,8 @@ class CustomFadeTransition extends MusicBeatSubstate
 			transSprite.animation.finishCallback = function(name:String) {
 				close();
 			};
-		} else {
+		else 
+			{
 			transSprite.animation.play('open');
 
 			transSprite.animation.finishCallback = function(name:String) {
