@@ -33,7 +33,7 @@ class CustomFadeTransition extends MusicBeatSubstate
 		transSprite.screenCenter();
 		transSprite.scrollFactor.set();
 
-		if(isTransIn) {)
+		if(isTransIn)
 			transSprite.animation.play('close');
 
 			transSprite.animation.finishCallback = function(name:String) {
