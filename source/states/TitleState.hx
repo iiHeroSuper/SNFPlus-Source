@@ -533,6 +533,7 @@ class TitleState extends MusicBeatState
 		super.update(elapsed);
 	}
 
+	// --- VIDEO PLAYBACK FUNCTION ---
 	public function startVideo(name:String)
 	{
 		#if VIDEOS_ALLOWED
@@ -564,18 +565,20 @@ class TitleState extends MusicBeatState
 			}
 		});
 
+		// --- "SMART" RESIZING ---
 		new FlxTimer().start(0.01, function(tmr:FlxTimer)
 		{
 			if(video == null || !video.exists) {
 				tmr.cancel();
 				return;
 			}
-
+			
+			// Is the video loaded? (Width > 0)
 			if(video.bitmap != null && video.bitmap.bitmapData != null && video.bitmap.bitmapData.width > 0) {
 				video.setGraphicSize(FlxG.width, FlxG.height);
 				video.updateHitbox();
 				video.screenCenter();
-				tmr.cancel();
+				tmr.cancel(); // Stop checking, we are done!
 			}
 		}, 0); 
 		
@@ -584,6 +587,7 @@ class TitleState extends MusicBeatState
 		startIntro();
 		#end
 	}
+	// -------------------------------
 
 	function createCoolText(textArray:Array<String>, ?offset:Float = 0)
 	{
@@ -619,7 +623,7 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	private var sickBeats:Int = 0;
+	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
 	public static var closedState:Bool = false;
 
 	override function beatHit()
@@ -642,6 +646,7 @@ class TitleState extends MusicBeatState
 			switch (sickBeats)
 			{
 				case 1:
+					//FlxG.sound.music.stop();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
@@ -680,6 +685,8 @@ class TitleState extends MusicBeatState
 
 	var skippedIntro:Bool = false;
 	var increaseVolume:Bool = false;
+	
+	// --- MODIFIED: Seamless Transition Logic ---
 	function skipIntro():Void
 	{
 		if (!skippedIntro)
@@ -687,6 +694,7 @@ class TitleState extends MusicBeatState
 			#if TITLE_SCREEN_EASTER_EGG
 			if (playJingle)
 			{
+				// Easter egg logic (Unchanged)
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
@@ -740,9 +748,11 @@ class TitleState extends MusicBeatState
 			else
 			#end 
 			{
+				// STANDARD LOGIC
 				remove(ngSpr);
 				remove(credGroup);
-
+				
+				// 1. Flash white to cover the screen
 				FlxG.camera.flash(FlxColor.WHITE, 4);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
@@ -758,15 +768,18 @@ class TitleState extends MusicBeatState
 					}
 				}
 				#end
-
+				
+				// 2. Set specific flag so MainMenu knows to "catch" the flash
 				MainMenuState.psychEngineIntro = true;
 				
 				skippedIntro = true;
 				transitioning = true;
-
+				
+				// 3. Disable black transition so the white flash persists
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
-
+				
+				// 4. Switch instantly
 				MusicBeatState.switchState(new MainMenuState());
 			}
 		}
