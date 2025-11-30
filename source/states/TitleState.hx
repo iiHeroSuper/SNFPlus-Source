@@ -31,7 +31,7 @@ import sys.FileSystem;
 import sys.io.File;
 #end
 
-import hxcodec.flixel.FlxVideoSprite as VideoHandler;
+import hxcodec.flixel.FlxVideoSprite;
 #end
 // -----------------------------
 
@@ -84,7 +84,7 @@ class TitleState extends MusicBeatState
 	var videoPlaying:Bool = false;
 	
 	#if VIDEOS_ALLOWED
-	var video:VideoHandler;
+	var video:FlxVideoSprite;
 	#end
 	// ----------------------------
 
@@ -552,7 +552,7 @@ class TitleState extends MusicBeatState
 
 		videoPlaying = true;
 		
-		video = new VideoHandler();
+		video = new FlxVideoSprite();
 		video.play(filepath);
 		add(video);
 		
