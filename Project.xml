@@ -79,8 +79,9 @@
 
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>
 	<haxelib name="SScript" if="HSCRIPT_ALLOWED" version="19.0.618"/>
-	
-	<haxelib name="hxCodec" if="desktop"/>
+	<!-- hxcodec hhmmmm !!??-->
+
+	<haxelib name="hxCodec" if="desktop || android" />
 	
 	<haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED"/>
 	<haxelib name="flxanimate"/>
