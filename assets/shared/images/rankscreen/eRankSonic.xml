@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<TextureAtlas imagePath="eRankSonic.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="LOOPANIM0000" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0001" x="299" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0002" x="299" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0003" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0004" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0005" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0006" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0007" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0008" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0009" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0010" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0011" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0012" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0013" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0014" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0015" x="300" y="3286" width="299" height="332" frameX="-1" frameY="-2" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="LOOPANIM0016" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0017" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0018" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0019" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0020" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0021" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0022" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0023" x="0" y="0" width="299" height="333" frameX="-1" frameY="-1" frameWidth="300" frameHeight="334"/>
+	<SubTexture name="LOOPANIM0024" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0025" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0026" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0027" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0028" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="LOOPANIM0029" x="599" y="0" width="300" height="334"/>
+	<SubTexture name="STARTANIM0000" x="899" y="0" width="492" height="492"/>
+	<SubTexture name="STARTANIM0001" x="1391" y="0" width="492" height="492"/>
+	<SubTexture name="STARTANIM0002" x="0" y="492" width="492" height="492"/>
+	<SubTexture name="STARTANIM0003" x="492" y="492" width="492" height="492"/>
+	<SubTexture name="STARTANIM0004" x="984" y="492" width="492" height="492"/>
+	<SubTexture name="STARTANIM0005" x="1476" y="492" width="492" height="492"/>
+	<SubTexture name="STARTANIM0006" x="0" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0007" x="0" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0008" x="0" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0009" x="0" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0010" x="492" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0011" x="492" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0012" x="984" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0013" x="984" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0014" x="984" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0015" x="1476" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0016" x="1476" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0017" x="1476" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0018" x="1476" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0019" x="1476" y="984" width="492" height="492"/>
+	<SubTexture name="STARTANIM0020" x="0" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0021" x="0" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0022" x="492" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0023" x="492" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0024" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0025" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0026" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0027" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0028" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0029" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0030" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0031" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0032" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0033" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0034" x="984" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0035" x="1476" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0036" x="1476" y="1476" width="492" height="492"/>
+	<SubTexture name="STARTANIM0037" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0038" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0039" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0040" x="492" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0041" x="492" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0042" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0043" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0044" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0045" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0046" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0047" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0048" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0049" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0050" x="984" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0051" x="1476" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0052" x="1476" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0053" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0054" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0055" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0056" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0057" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0058" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0059" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0060" x="0" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0061" x="492" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0062" x="492" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0063" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0064" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0065" x="0" y="1968" width="492" height="492"/>
+	<SubTexture name="STARTANIM0066" x="984" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0067" x="984" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0068" x="984" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0069" x="1476" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0070" x="1476" y="2460" width="492" height="492"/>
+	<SubTexture name="STARTANIM0071" x="0" y="2952" width="303" height="322" frameX="-71" frameY="-163" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0072" x="0" y="2952" width="303" height="322" frameX="-71" frameY="-163" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0073" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0074" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0075" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0076" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0077" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0078" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0079" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0080" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0081" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0082" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0083" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0084" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0085" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0086" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0087" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0088" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0089" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0090" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0091" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0092" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0093" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0094" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0095" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0096" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0097" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0098" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0099" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0100" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0101" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0102" x="1201" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0103" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0104" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0105" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0106" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0107" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0108" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0109" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0110" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0111" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0112" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0113" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0114" x="602" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0115" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0116" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0117" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0118" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0119" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0120" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0121" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0122" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0123" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0124" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0125" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0126" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0127" x="902" y="2952" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0128" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0129" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0130" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0131" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0132" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0133" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0134" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0135" x="303" y="2952" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0136" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0137" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0138" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0139" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0140" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0141" x="1500" y="2952" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0142" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0143" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0144" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0145" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0146" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0147" x="599" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0148" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0149" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0150" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0151" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0152" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0153" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0154" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0155" x="300" y="3286" width="299" height="332" frameX="-76" frameY="-154" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0156" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0157" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0158" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0159" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0160" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0161" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0162" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0163" x="898" y="3286" width="299" height="333" frameX="-76" frameY="-153" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0164" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0165" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0166" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0167" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0168" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0169" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0170" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0171" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+	<SubTexture name="STARTANIM0172" x="0" y="3286" width="300" height="334" frameX="-75" frameY="-152" frameWidth="492" frameHeight="492"/>
+</TextureAtlas>

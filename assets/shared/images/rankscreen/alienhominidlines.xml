@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="alienhominidlines.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="lines ahhd0000" x="0" y="0" width="1002" height="347" frameX="-27" frameY="-63" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0001" x="0" y="0" width="1002" height="347" frameX="-27" frameY="-63" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0002" x="0" y="347" width="1130" height="465" frameX="0" frameY="0" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0003" x="0" y="347" width="1130" height="465" frameX="0" frameY="0" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0004" x="0" y="812" width="1085" height="449" frameX="-19" frameY="-18" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0005" x="0" y="812" width="1085" height="449" frameX="-19" frameY="-18" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0006" x="0" y="1261" width="1035" height="497" frameX="-83" frameY="-4" frameWidth="1130" frameHeight="501"/>
+	<SubTexture name="lines ahhd0007" x="0" y="1261" width="1035" height="497" frameX="-83" frameY="-4" frameWidth="1130" frameHeight="501"/>
+</TextureAtlas>
