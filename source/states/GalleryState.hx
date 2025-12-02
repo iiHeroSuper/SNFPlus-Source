@@ -23,8 +23,8 @@ class GalleryState extends MusicBeatState
 		["VID2", "SNF Pre-V1 Footage 2", "Sans Week Showcase (Part 1, Jan 4th 2021)", 1],
 		["VID3", "SNF Pre-V1 Footage 3", "Sans Week Showcase (Part 2, Jan 4th 2021)", 1],
 		["VID4", "SNF Pre-V1 Footage 4", "Sans Week Showcase (Part 3, Jan 4th 2021)", 1],
-		["audioexample", "Audio Example", "Press enter to play a sound effect.", 2],
-		["musicexample", "Audio Example 2", "Press enter to play a song.", 3]
+		["freakyMenu", "V1 Main Menu Theme", "Press enter to play the V1 Menu Theme.", 3]
+		["sonicvaThanks", "lol", "Thanks from Bangbangchittychitty", 2],
 	];
 	var disableInput:Bool = true;
     var curSelected:Int = 0;
