@@ -26,7 +26,8 @@ class GalleryState extends MusicBeatState
 		["freakyMenu", "V1 Main Menu Theme", "Press enter to play the V1 Menu Theme.", 3],
 		["iconv1", "V1 Icon (Unused)", "Her name is Sonic GF, i'm glad Breezie replaced her..", 0],
 		["bannerv1", "V1 GB Banner", "MY EYES!!!", 0],
-		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0]
+		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0],
+		["snf-sega", "V5 Sega Splash Sound (2022, Unused)", "there's an old github repo out there with this in it and nothing else", 2]
 	];
 	var disableInput:Bool = true;
     var curSelected:Int = 0;
