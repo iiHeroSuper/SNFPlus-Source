@@ -18,8 +18,12 @@ class GalleryState extends MusicBeatState
 {
 	// file name, title, desc, type (0 = image, 1 = video, 2 = sound effect, 3 = music)
 	var galleryList:Array<Array<Dynamic>> = [
-        ["bima", "bimagamongMOP", "The creator of this gallery and this image.", 0],
-		["videoexample", "Video Example", "Press enter to play your video.", 1],
+        ["Sanic", "Pre-V1 Sonic", "The first drawing of SNF Sonic ever!! (December 31st 2020)", 0],
+		["VID_20210103_200945", "SNF Pre-V1 Footage 1", "Oldest SNF video to ever exist (Jan 3rd 2021)", 1],
+		["VID_20210104_151342", "SNF Pre-V1 Footage 2", "(Jan 4th 2021)", 1],
+		["VID_20210104_151418", "SNF Pre-V1 Footage 3", "Sans Week Showcase (Part 1, Jan 4th 2021)", 1],
+		["VID_20210104_151701", "SNF Pre-V1 Footage 4", "Sans Week Showcase (Part 2, Jan 4th 2021)", 1],
+		["VID_20210104_152812", "SNF Pre-V1 Footage 5", "Sans Week Showcase (Part 3, Jan 4th 2021)", 1],
 		["audioexample", "Audio Example", "Press enter to play a sound effect.", 2],
 		["musicexample", "Audio Example 2", "Press enter to play a song.", 3]
 	];
