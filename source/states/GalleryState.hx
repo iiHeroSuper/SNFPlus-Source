@@ -23,10 +23,10 @@ class GalleryState extends MusicBeatState
 		["VID2", "SNF Pre-V1 Footage 2", "Sans Week Showcase (Part 1, Jan 4th 2021)", 1],
 		["VID3", "SNF Pre-V1 Footage 3", "Sans Week Showcase (Part 2, Jan 4th 2021)", 1],
 		["VID4", "SNF Pre-V1 Footage 4", "Sans Week Showcase (Part 3, Jan 4th 2021)", 1],
-		["freakyMenu", "V1 Main Menu Theme", "Press enter to play the V1 Menu Theme.", 3]
+		["freakyMenu", "V1 Main Menu Theme", "Press enter to play the V1 Menu Theme.", 3],
 		["iconv1", "V1 Icon (Unused)", "Her name is Sonic GF, i'm glad Breezie replaced her..", 0],
 		["bannerv1", "V1 GB Banner", "MY EYES!!!", 0],
-		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0],
+		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0]
 	];
 	var disableInput:Bool = true;
     var curSelected:Int = 0;
