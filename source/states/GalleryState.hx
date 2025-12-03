@@ -36,6 +36,15 @@ class GalleryState extends MusicBeatState
 		["iconv1", "V1 Icon (Unused)", "Her name is Sonic GF, i'm glad Breezie replaced her..", 0],
 		["bannerv1", "V1 GB Banner", "MY EYES!!!", 0],
 		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0],
+		["Friday Night Funkin 2021-01-06 01-19-12", "Sonic Night Funkin Trailer #1 Tutorial", "SNF V1 Showcase 1 (Jan 6th 2021)", 1],
+		["Friday Night Funkin 2021-01-06 01-28-17", "Sonic Night Funkin Trailer #2 Sans and Pump", "SNF V1 Showcase 2 (Jan 6th 2021)", 1],
+		["Friday Night Funkin 2021-01-07 01-36-43", "Sonic Night Funkin Dream Trailer (You Play the Rest)", "SNF V2 Showcase 1 (Jan 7th 2021)", 1],
+		["Friday Night Funkin 2021-01-07 21-01-19", "Sonic Night Funkin (WIP Trailer)", "SNF V2 Showcase 2 (Jan 7th 2021)", 1],
+		["Sonic Night Funkin Pico Update", "Sonic Night Funkin Pico Update W.I.P", "SNF V3 Showcase 1 (Jan 8th 2021)", 1],
+		["Sonic Night Funkin Act 3 Teaser Trailer", "Sonic Night Funkin Zone 3.0 Act 4 (Boss Week) Teaser Trailer", "SNF V3 Showcase 2 (Jan 10th 2021)", 1],
+		["Friday Night Funkin 2021-02-04 21-59-17", "Sonic Night Funkin (NEW GF!)", "SNF V3 Showcase 3 (Feb 4th 2021)", 1],
+		["Friday Night Funkin' 2021-02-05 04-29-09", "Sonic Night Funkin Testing or Some Crap", "SNF V4 Showcase 1 (Feb 5th 2021)", 1],
+		["Friday Night Funkin' 2021-02-05 05-35-40", "Sonic Night Funkin What?!", "SNF V4 Showcase 2 (Feb 5th 2021)", 1],
 		["snf-sega", "V5 Sega Splash Sound (2022, Unused)", "there's an old github repo out there with this in it and nothing else", 2]
 	];
 	
