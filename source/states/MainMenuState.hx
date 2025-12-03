@@ -1,3 +1,7 @@
+// code made by tyler
+// if you peek in this code, you'll see segments written by me
+// because why not
+
 package states;
 
 import flixel.FlxG;
@@ -8,6 +12,7 @@ import flixel.util.FlxColor;
 import flixel.addons.display.FlxBackdrop;
 import backend.MusicBeatState;
 import backend.Paths; 
+import flixel.util.FlxTimer;
 
 import flixel.tweens.FlxEase;
 import flixel.addons.effects.FlxTrail;
@@ -21,8 +26,6 @@ import states.AchievementsMenuState;
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '1.0';
-	
-	// flag to check if we came from the intro
 	public static var psychEngineIntro:Bool = false;
 	
 	// Main Menu Assets
@@ -37,25 +40,24 @@ class MainMenuState extends MusicBeatState
 	var curMiddleOption:Int = 0; 
 	var arrowL:FlxSprite;
 	var arrowR:FlxSprite;
+	
 	// Play Select Menu Assets
-	var blender:FlxSprite; // The blur background
+	var blender:FlxSprite;
 	var storyBtn:FlxSprite;
 	var freeplayBtn:FlxSprite;
 	var selector:FlxSprite; 
 	var curPlaySelect:Int = 0;
-	// 0 = Story (Top), 1 = Freeplay (Bottom)
 
 	// State Management
 	var lockedInput:Bool = false;
 	var menuMode:Int = 0;
-	// 0 = Main Menu, 1 = Play Select Menu
 
 	override public function create()
 	{
 		super.create();
-
 		FlxG.mouse.visible = true;
 
+		// Bgs
 		background = new FlxSprite().loadGraphic(Paths.image('newmainmenu/tripletsborn'));
 		background.scrollFactor.set(); 
 		add(background);
@@ -67,6 +69,7 @@ class MainMenuState extends MusicBeatState
 		checkerboard.scale.set(3, 3); 
 		add(checkerboard);
 
+		// Logo
 		logo = new FlxSprite(0, 30).loadGraphic(Paths.image('newmainmenu/logo'));
 		logo.scale.set(0.7, 0.7); 
 		logo.updateHitbox();
@@ -74,12 +77,14 @@ class MainMenuState extends MusicBeatState
 		
 		logoTrail = new FlxTrail(logo, null, 4, 4, 0.3); 
 		add(logoTrail);
-		
 		add(logo);
+		
 		FlxTween.tween(logo, { y: logo.y + 20 }, 1.2, {
 			type: FlxTween.PINGPONG,
 			ease: FlxEase.sineInOut
 		});
+
+		// Main Menu Thingies
 		aeroBar = new FlxSprite(0, FlxG.height - 220).loadGraphic(Paths.image('newmainmenu/weird aero bar'));
 		aeroBar.scale.set(0.75, 0.75);
 		aeroBar.updateHitbox();
@@ -89,6 +94,7 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
+		// Trophy
 		var trophyIcon = new FlxSprite(aeroBar.x + 80, aeroBar.y + (aeroBar.height / 2));
 		trophyIcon.frames = Paths.getSparrowAtlas('newmainmenu/bootens');
 		trophyIcon.animation.addByPrefix('idle', 'awards norm');
@@ -100,18 +106,21 @@ class MainMenuState extends MusicBeatState
 		trophyIcon.y -= trophyIcon.height / 2;
 		menuItems.add(trophyIcon);
 
+		// Middle Option
 		var optionSprite = new FlxSprite(0, aeroBar.y + (aeroBar.height / 2));
 		optionSprite.frames = Paths.getSparrowAtlas('newmainmenu/bootens');
 		for (option in middleOptions) {
 			optionSprite.animation.addByPrefix(option + '-idle', option + ' norm');
 			optionSprite.animation.addByPrefix(option + '-hit', option + ' hit', 24, false);
+			optionSprite.animation.addByPrefix(option + '-teelt', option + ' teelt', 24, false);
 		}
 		optionSprite.animation.addByPrefix('flarp', 'flarp', 24, false);
 		optionSprite.scale.set(0.8, 0.8);
 		optionSprite.updateHitbox();
-		optionSprite.y -= (optionSprite.height / 2) + 15;
 		menuItems.add(optionSprite);
-		recenterMiddleOption();
+		recenterMiddleOption(); 
+
+		// Settings
 		var settingsIcon = new FlxSprite(0, aeroBar.y + (aeroBar.height / 2));
 		settingsIcon.frames = Paths.getSparrowAtlas('newmainmenu/bootens');
 		settingsIcon.animation.addByPrefix('idle', 'settings norm');
@@ -123,6 +132,7 @@ class MainMenuState extends MusicBeatState
 		settingsIcon.x = (aeroBar.x + aeroBar.width) - 150 - settingsIcon.width; 
 		menuItems.add(settingsIcon);
 
+		// Arrows
 		arrowL = new FlxSprite(0, 0);
 		arrowL.frames = Paths.getSparrowAtlas('newmainmenu/bootens');
 		arrowL.animation.addByPrefix('idle', 'go there', 24, true);
@@ -143,12 +153,14 @@ class MainMenuState extends MusicBeatState
 		positionArrows();
 		changeSelection();
 
+		// PLAY SELECT ITEMS
 		blender = new FlxSprite().loadGraphic(Paths.image('newmainmenu/blender'));
 		blender.screenCenter();
 		blender.scrollFactor.set();
 		blender.visible = false;
 		blender.alpha = 0;
 		add(blender);
+
 		storyBtn = new FlxSprite(0, 0).loadGraphic(Paths.image('newmainmenu/storymode'));
 		storyBtn.scale.set(0.7, 0.7);
 		storyBtn.updateHitbox();
@@ -157,33 +169,28 @@ class MainMenuState extends MusicBeatState
 		storyBtn.visible = false;
 		add(storyBtn);
 
-		// 3. Freeplay Button (Bottom)
 		freeplayBtn = new FlxSprite(0, 0).loadGraphic(Paths.image('newmainmenu/freeplay'));
-		freeplayBtn.scale.set(0.7, 0.7); // Adjust scale if needed
+		freeplayBtn.scale.set(0.7, 0.7);
 		freeplayBtn.updateHitbox();
 		freeplayBtn.screenCenter(X);
 		freeplayBtn.y = (FlxG.height / 2) - 5; 
 		freeplayBtn.visible = false;
 		add(freeplayBtn);
-		// 4. Selector Arrow
+
 		selector = new FlxSprite();
 		selector.frames = Paths.getSparrowAtlas('newmainmenu/arrowthing');
 		selector.animation.addByPrefix('idle', 'gay little arrow', 24, true);
 		selector.animation.play('idle');
-		// ROTATION: The asset points UP. 90 degrees clockwise makes it point RIGHT.
 		selector.angle = 90; 
 		selector.scale.set(0.8, 0.8);
 		selector.updateHitbox();
 		selector.visible = false;
 		add(selector);
 
-		// Set initial selector position for later
 		updatePlaySelectSelection(0); 
 		
-		// --- SEAMLESS TRANSITION LOGIC ---
 		if (psychEngineIntro)
 		{
-			// Start with full white and fade out, matching TitleState
 			FlxG.camera.flash(FlxColor.WHITE, 4);
 			psychEngineIntro = false;
 		}
@@ -207,7 +214,6 @@ class MainMenuState extends MusicBeatState
 	
 	function updateMainMenu()
 	{
-		// --- MOUSE SUPPORT FOR MAIN MENU ---
 		if (FlxG.mouse.overlaps(arrowL))
 		{
 			if (FlxG.mouse.justPressed) {
@@ -231,22 +237,19 @@ class MainMenuState extends MusicBeatState
 				if (curSelected != id)
 				{
 					curSelected = id;
-					changeSelection(0); // Refresh selection visuals without moving
+					changeSelection(0);
 					FlxG.sound.play(Paths.sound('scrollMenu'));
 				}
 				
 				if (FlxG.mouse.justPressed)
 				{
-					// Trigger the same logic as pressing ACCEPT
 					acceptSelection();
 				}
 			}
 		});
-		// -----------------------------------
 
 		if (controls.UI_LEFT_P)
 		{
-			lockedInput = true;
 			if (curSelected == 1)
 			{
 				changeMiddleOption(-1);
@@ -261,7 +264,6 @@ class MainMenuState extends MusicBeatState
 		
 		if (controls.UI_RIGHT_P)
 		{
-			lockedInput = true;
 			if (curSelected == 1)
 			{
 				changeMiddleOption(1);
@@ -280,7 +282,6 @@ class MainMenuState extends MusicBeatState
 		}
 	}
 
-	// Refactored selection logic so mouse can use it too
 	function acceptSelection()
 	{
 		lockedInput = true;
@@ -293,7 +294,7 @@ class MainMenuState extends MusicBeatState
 			case 0: // TROPHY
 				selectedSprite.animation.play('hit');
 				selectedSprite.animation.finishCallback = function(name:String) {
-					FlxG.mouse.visible = false; // Disable mouse
+					FlxG.mouse.visible = false;
 					MusicBeatState.switchState(new AchievementsMenuState());
 				};
 
@@ -307,7 +308,7 @@ class MainMenuState extends MusicBeatState
 			case 2: // SETTINGS
 				selectedSprite.animation.play('hit');
 				selectedSprite.animation.finishCallback = function(name:String) {
-					FlxG.mouse.visible = false; // Disable mouse
+					FlxG.mouse.visible = false;
 					MusicBeatState.switchState(new OptionsState());
 				};
 		}
@@ -315,11 +316,10 @@ class MainMenuState extends MusicBeatState
 	
 	function updatePlaySelect()
 	{
-		// --- MOUSE SUPPORT FOR PLAY SELECT ---
 		if (FlxG.mouse.overlaps(storyBtn))
 		{
 			if (curPlaySelect != 0) {
-				updatePlaySelectSelection(1); // Toggle to 0
+				updatePlaySelectSelection(1);
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 			if (FlxG.mouse.justPressed) acceptPlaySelect();
@@ -328,14 +328,12 @@ class MainMenuState extends MusicBeatState
 		if (FlxG.mouse.overlaps(freeplayBtn))
 		{
 			if (curPlaySelect != 1) {
-				updatePlaySelectSelection(1); // Toggle to 1
+				updatePlaySelectSelection(1);
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 			if (FlxG.mouse.justPressed) acceptPlaySelect();
 		}
-		// -------------------------------------
 
-		// Use UP and DOWN for Story/Freeplay selection
 		if (controls.UI_UP_P || controls.UI_DOWN_P)
 		{
 			FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -352,27 +350,20 @@ class MainMenuState extends MusicBeatState
 			lockedInput = true;
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			
-			// Fade out the play select menu
 			FlxTween.tween(blender, {alpha: 0}, 0.2);
 			selector.visible = false;
 			storyBtn.visible = false;
 			freeplayBtn.visible = false;
 			
-			// Fade out done callback
-			new flixel.util.FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer) {
+			new FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer) {
 				blender.visible = false;
-				
-				// Return to Main Menu
 				menuMode = 0; 
-				
-				// Re-enable visibility of Main Menu items
 				menuItems.visible = true;
 				arrowL.visible = true;
 				arrowR.visible = true;
 				aeroBar.visible = true;
 				logo.visible = true;
 				logoTrail.visible = true;
-				
 				lockedInput = false; 
 			});
 		}
@@ -382,22 +373,12 @@ class MainMenuState extends MusicBeatState
 	{
 		lockedInput = true; 
 		FlxG.sound.play(Paths.sound('confirmMenu'));
-		// Simple bounce effect for visual feedback
 		var selectedBtn = (curPlaySelect == 0) ? storyBtn : freeplayBtn;
 		FlxTween.tween(selectedBtn.scale, {x: 0.75, y: 0.75}, 0.1, {ease: FlxEase.sineInOut, type: FlxTween.PINGPONG});
-		// Small delay before switching state
 		new flixel.util.FlxTimer().start(0.5, function(tmr:flixel.util.FlxTimer) {
-			
-			FlxG.mouse.visible = false; // Disable mouse before switching
-			
-			if (curPlaySelect == 0) // Story (Top)
-			{
-				MusicBeatState.switchState(new StoryMenuState());
-			}
-			else // Freeplay (Bottom)
-			{
-				MusicBeatState.switchState(new FreeplayState());
-			}
+			FlxG.mouse.visible = false;
+			if (curPlaySelect == 0) MusicBeatState.switchState(new StoryMenuState());
+			else MusicBeatState.switchState(new FreeplayState());
 		});
 	}
 
@@ -418,6 +399,12 @@ class MainMenuState extends MusicBeatState
 			}
 			if(i == 2) item.animation.play('idle');
 		}
+		
+		// update log: opacity
+		// if on Middle Option (1), alpha 1.0. if not, alpha 0.6.
+		arrowL.alpha = (curSelected == 1) ? 1.0 : 0.6;
+		arrowR.alpha = (curSelected == 1) ? 1.0 : 0.6;
+		
 		recenterMiddleOption();
 		positionArrows();
 		var selectedItem = menuItems.members[curSelected];
@@ -444,8 +431,11 @@ class MainMenuState extends MusicBeatState
 		}
 	}
 
+	//update log: fied animation order
 	function changeMiddleOption(change:Int = 0)
 	{
+		lockedInput = true;
+		
 		curMiddleOption += change;
 		if (curMiddleOption < 0) curMiddleOption = middleOptions.length - 1;
 		if (curMiddleOption >= middleOptions.length) curMiddleOption = 0;
@@ -453,15 +443,29 @@ class MainMenuState extends MusicBeatState
 		var animName = middleOptions[curMiddleOption];
 		var optionSprite = menuItems.members[1]; 
 		
-		optionSprite.animation.play('flarp');
+		// 1. Play TEELT
+		optionSprite.animation.play(animName + '-teelt', true);
+		optionSprite.updateHitbox();
+		recenterMiddleOption();
+		
 		optionSprite.animation.finishCallback = function(name:String) {
-			if (name == 'flarp')
+			if (name == animName + '-teelt')
 			{
-				optionSprite.animation.play(animName + '-idle');
+				// 2. Play FLARP
+				optionSprite.animation.play('flarp', true);
 				optionSprite.updateHitbox();
 				recenterMiddleOption();
-				positionArrows();
-				lockedInput = false;
+				
+				// 3. Switch to IDLE
+				optionSprite.animation.finishCallback = function(name2:String) {
+					if (name2 == 'flarp') {
+						optionSprite.animation.play(animName + '-idle');
+						optionSprite.updateHitbox();
+						recenterMiddleOption();
+						positionArrows();
+						lockedInput = false;
+					}
+				};
 			}
 		};
 	}
@@ -472,10 +476,8 @@ class MainMenuState extends MusicBeatState
 		switch(selection)
 		{
 			case 'play':
-				// --- Enter Play Select Menu (Mode 1) ---
 				lockedInput = true;
 				menuMode = 1;
-				// Hide Main Menu elements
 				menuItems.visible = false;
 				aeroBar.visible = false;
 				arrowL.visible = false;
@@ -483,32 +485,28 @@ class MainMenuState extends MusicBeatState
 				logo.visible = false;
 				logoTrail.visible = false;
 				
-				// Fade in the Blender (Blur Background)
 				blender.visible = true;
 				FlxTween.tween(blender, {alpha: 1}, 0.4, {ease: FlxEase.quartOut});
-				// Show new Buttons
 				storyBtn.visible = true;
 				freeplayBtn.visible = true;
 				selector.visible = true;
 				
-				// Reset selection to Story Mode
 				updatePlaySelectSelection(0);
-				// Small delay to prevent accidental double input
 				new flixel.util.FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer)
 				{
 					lockedInput = false;
 				});
 				return;
 			case 'gallery':
-				FlxG.mouse.visible = false; // Disable mouse
+				FlxG.mouse.visible = false;
 				MusicBeatState.switchState(new GalleryState()); 
 				return;
 			case 'credits':
-				FlxG.mouse.visible = false; // Disable mouse
+				FlxG.mouse.visible = false;
 				MusicBeatState.switchState(new CreditsState());
 				return;
 			case 'soundtest':
-				FlxG.mouse.visible = false; // Disable mouse
+				FlxG.mouse.visible = false;
 				MusicBeatState.switchState(new SoundTestState());
 				return;
 		}
@@ -516,12 +514,9 @@ class MainMenuState extends MusicBeatState
 	
 	function updatePlaySelectSelection(change:Int = 0)
 	{
-		// Toggle between 0 (Story/Top) and 1 (Freeplay/Bottom)
 		if(change != 0)
-			curPlaySelect = (curPlaySelect == 0) ?
-				1 : 0;
+			curPlaySelect = (curPlaySelect == 0) ? 1 : 0;
 		
-		// Visual feedback: Dim the unselected button slightly
 		if (curPlaySelect == 0) {
 			storyBtn.alpha = 1.0;
 			freeplayBtn.alpha = 0.6;
@@ -530,19 +525,14 @@ class MainMenuState extends MusicBeatState
 			freeplayBtn.alpha = 1.0;
 		}
 
-		// Update selector position based on the new layout
-		if (curPlaySelect == 0) // Story Mode (Top)
+		if (curPlaySelect == 0) 
 		{
-			// Point arrow at Story Button
 			selector.x = storyBtn.x - selector.width + 10;
-			// Slight offset
 			selector.y = storyBtn.y + (storyBtn.height / 2) - (selector.height / 2);
 		}
-		else // Freeplay (Bottom)
+		else 
 		{
-			// Point arrow at Freeplay Button
 			selector.x = freeplayBtn.x - selector.width + 10;
-			// Slight offset
 			selector.y = freeplayBtn.y + (freeplayBtn.height / 2) - (selector.height / 2);
 		}
 	}
@@ -560,5 +550,6 @@ class MainMenuState extends MusicBeatState
 	{
 		var optionSprite = menuItems.members[1];
 		optionSprite.x = aeroBar.x + (aeroBar.width / 2) - (optionSprite.width / 2);
+		optionSprite.y = (aeroBar.y + (aeroBar.height / 2)) - (optionSprite.height / 2) - 15;
 	}
 }

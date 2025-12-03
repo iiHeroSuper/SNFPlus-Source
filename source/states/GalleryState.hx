@@ -12,6 +12,15 @@ import flixel.util.FlxColor;
 import flixel.addons.display.FlxBackdrop;
 import flixel.text.FlxText;
 import backend.Paths; 
+
+#if VIDEOS_ALLOWED
+import hxcodec.flixel.FlxVideoSprite;
+#end
+
+#if sys
+import sys.FileSystem;
+#end
+
 using StringTools;
 
 class GalleryState extends MusicBeatState
@@ -29,6 +38,7 @@ class GalleryState extends MusicBeatState
 		["logolegacy", "V1-V4 Logo", "this logo is why the mod isn't called Sonic Speed Funkin :P", 0],
 		["snf-sega", "V5 Sega Splash Sound (2022, Unused)", "there's an old github repo out there with this in it and nothing else", 2]
 	];
+	
 	var disableInput:Bool = true;
     var curSelected:Int = 0;
 	var pageNo:Int;
@@ -40,9 +50,14 @@ class GalleryState extends MusicBeatState
 	var colorBG:FlxSprite;
 	var graphic:FlxSprite;
 
+	// --- VIDEO VARIABLES ---
+	#if VIDEOS_ALLOWED
+	var videoSprite:FlxVideoSprite;
+	#end
+	var inVideo:Bool = false;
+
 	override function create(){
 		// --- PLAY GALLERY MUSIC (FROM SHARED FOLDER) ---
-		// Looks for: assets/shared/music/gallery.ogg
 		FlxG.sound.playMusic(Paths.getSharedPath('music/gallery.ogg'), 0);
 		FlxG.sound.music.fadeIn(1, 0, 0.7); 
 		
@@ -53,6 +68,7 @@ class GalleryState extends MusicBeatState
 		colorBG.antialiasing = false;
 		colorBG.screenCenter();
 		add(colorBG);
+		
 		var daBG = new FlxBackdrop("assets/shared/images/gallery/squares.png", XY, 0, 0);
 		daBG.updateHitbox();
 		daBG.scrollFactor.set(0, 0);
@@ -71,6 +87,7 @@ class GalleryState extends MusicBeatState
 		titleG.alpha = 0;
 		titleG.y -= 290;
 		add(titleG);
+		
 		descG = new FlxText(0, 0, 900, galleryList[curSelected][2]);
 		descG.setFormat(fontPath, 35, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
 		descG.screenCenter();
@@ -84,6 +101,7 @@ class GalleryState extends MusicBeatState
 		instDisplay.alpha = 0;
 		instDisplay.x -= 460;
 		add(instDisplay);
+		
 		FlxTween.tween(titleG, {y: titleG.y + 10, alpha: 1}, 0.8, {ease: FlxEase.sineOut});
 		FlxTween.tween(descG, {y: descG.y - 10, alpha: 1}, 0.8, {ease: FlxEase.sineOut});
 		FlxTween.tween(instDisplay, {x: instDisplay.x + 10, alpha: 1}, 0.8, {ease: FlxEase.sineOut, onComplete:function(twn:FlxTween){disableInput = false;}});
@@ -92,6 +110,17 @@ class GalleryState extends MusicBeatState
 	}
 
 	override function update(elapsed:Float){
+		if(inVideo) {
+			#if VIDEOS_ALLOWED
+			if(FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.ESCAPE || FlxG.keys.justPressed.SPACE) {
+				if(videoSprite != null && videoSprite.bitmap.onEndReached != null)
+					videoSprite.bitmap.onEndReached.dispatch();
+			}
+			#end
+			super.update(elapsed);
+			return;
+		}
+
 		if (!disableInput){
 			if (FlxG.keys.justPressed.X){
 				if (instDisplay.alpha == 1){
@@ -109,7 +138,6 @@ class GalleryState extends MusicBeatState
 				if (daSound != null) daSound.stop();
 				
 				// --- RESTORE MENU MUSIC ---
-				// Assumes freakyMenu.ogg is in assets/music/
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				
 				MusicBeatState.switchState(new MainMenuState());
@@ -117,18 +145,23 @@ class GalleryState extends MusicBeatState
 
 			if (FlxG.keys.justPressed.LEFT) changeItem(-1);
 			if (FlxG.keys.justPressed.RIGHT) changeItem(1);
+			
 			if (galleryList[curSelected][3] == 0){
 				if (FlxG.keys.justPressed.Q) img.scale.set(img.scale.x + 0.2, img.scale.y + 0.2);
 				if (FlxG.keys.justPressed.E) img.scale.set(img.scale.x - 0.2, img.scale.y - 0.2);
-				if (FlxG.keys.justPressed.W) img.y += 20;
-				if (FlxG.keys.justPressed.A) img.x += 20;
-				if (FlxG.keys.justPressed.S) img.y -= 20;	
-				if (FlxG.keys.justPressed.D) img.x -= 20;
+				
+				// FIXED CONTROLS: W goes UP (-), S goes DOWN (+)
+				if (FlxG.keys.justPressed.W) img.y -= 20;
+				if (FlxG.keys.justPressed.A) img.x -= 20;
+				if (FlxG.keys.justPressed.S) img.y += 20;	
+				if (FlxG.keys.justPressed.D) img.x += 20;
 			}
 
 			if (FlxG.keys.justPressed.ENTER){
 				if (galleryList[curSelected][3] == 1){
-					// Video logic
+					// --- VIDEO LOGIC ---
+					var videoName:String = galleryList[curSelected][0];
+					startVideo(videoName);
 				}else if (galleryList[curSelected][3] == 2){
 					var filepath:String = "assets/shared/sounds/gallery/" + galleryList[curSelected][0] + ".ogg";
 					playDaSound(filepath);
@@ -139,6 +172,60 @@ class GalleryState extends MusicBeatState
 			}
 		}
 		super.update(elapsed);
+	}
+
+	public function startVideo(name:String) {
+		#if VIDEOS_ALLOWED
+		var fileName = Paths.video("gallery/" + name); // Expects assets/videos/gallery/name.mp4
+
+		#if sys
+		if(!FileSystem.exists(fileName)) {
+			trace("Video not found at: " + fileName);
+			return;
+		}
+		#end
+
+		inVideo = true;
+		
+		// Pause music while video plays
+		if(FlxG.sound.music != null)
+			FlxG.sound.music.pause();
+		if(daSound != null) 
+			daSound.pause();
+
+		videoSprite = new FlxVideoSprite();
+		videoSprite.play(fileName);
+		
+		// Callback when video ends
+		videoSprite.bitmap.onEndReached.add(function() {
+			videoSprite.destroy();
+			inVideo = false;
+			
+			// Resume music
+			if(FlxG.sound.music != null)
+				FlxG.sound.music.resume();
+		});
+
+		// Smart Resize (Same as TitleState logic)
+		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		{
+			if(videoSprite == null || !videoSprite.exists) {
+				tmr.cancel();
+				return;
+			}
+			
+			if(videoSprite.bitmap != null && videoSprite.bitmap.bitmapData != null && videoSprite.bitmap.bitmapData.width > 0) {
+				videoSprite.setGraphicSize(FlxG.width, FlxG.height);
+				videoSprite.updateHitbox();
+				videoSprite.screenCenter();
+				tmr.cancel();
+			}
+		}, 0);
+
+		add(videoSprite);
+		#else
+		trace("VIDEOS NOT ALLOWED IN PROJECT.XML");
+		#end
 	}
 
 	public function playDaSound(path:String){
