@@ -78,7 +78,7 @@ class GalleryState extends MusicBeatState
 		descG.y += 290;
 		add(descG);
 
-		instDisplay = new FlxText(0, 0, 0, "Q/E - Zoom In/Out\nWASD - Move Image\nX - Toggle Text\n" + pageNo + " / " + galleryList.length);
+		instDisplay = new FlxText(0, 0, 0, "Q/E - Zoom In/Out\nWASD - Move Image\nX - Toggle Text\nEnter - Play Media\n" + pageNo + " / " + galleryList.length);
 		instDisplay.setFormat(fontPath, 35, FlxColor.WHITE, LEFT, OUTLINE, FlxColor.BLACK);
 		instDisplay.screenCenter();
 		instDisplay.alpha = 0;
@@ -163,7 +163,7 @@ class GalleryState extends MusicBeatState
 		pageNo = curSelected + 1;
 		titleG.text = galleryList[curSelected][1];
 		descG.text = galleryList[curSelected][2];
-		instDisplay.text = "Q/E - Zoom In/Out\nWASD - Move Image\nX - Toggle Text\n" + pageNo + " / " + galleryList.length;
+		instDisplay.text = "Q/E - Zoom In/Out\nWASD - Move Image\nX - Toggle Text\nEnter - Play Media\n" + pageNo + " / " + galleryList.length;
 		loadfirstThing();
 	}
 

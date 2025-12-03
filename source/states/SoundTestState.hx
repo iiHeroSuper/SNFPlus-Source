@@ -40,7 +40,7 @@ class SoundTestState extends MusicBeatState
 	override function create()
 	{
 		// Gallery Music
-		FlxG.sound.playMusic(Paths.getSharedPath('music/gallery.ogg'), 0);
+		FlxG.sound.playMusic(Paths.getSharedPath('music/soundtest.ogg'), 0);
 		FlxG.sound.music.fadeIn(1, 0, 0.7);
 
 		generateLists();
