@@ -1,5 +1,5 @@
 function onCreate()
--- makeAnimatedLuaSprite('bgfolk', 'bgfolkSONG2', -250, 250)
+makeAnimatedLuaSprite('bgfolk', 'bgfolkSONG2', -1550, 250)
 addAnimationByPrefix('bgfolk', 'dancey', 'bg dance', 24, true)
 objectPlayAnimation('bgfolk', 'dancey')
 scaleObject('bgfolk', 1.7, 1.7)
