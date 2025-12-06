@@ -1,7 +1,8 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('anima_stage', 'anima_stage', -600, -100);
+	makeLuaSprite('anima_stage', 'anima_stage', -200, 100);
 	setLuaSpriteScrollFactor('stagefront', 0.9, 0.9);
+	scaleObject('anima_stage', 0.8, 0.8);
 	
 	makeLuaSprite('mogus', 'anima_stage_mogus', -800, 600);
 	setLuaSpriteScrollFactor('stagefront', 0.9, 0.9);
