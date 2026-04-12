@@ -553,7 +553,6 @@ class TitleState extends MusicBeatState
 		videoPlaying = true;
 		
 		video = new FlxVideoSprite();
-		video.play(filepath);
 		add(video);
 		
 		video.bitmap.onEndReached.add(function() 
@@ -565,22 +564,14 @@ class TitleState extends MusicBeatState
 			}
 		});
 
-		// --- "SMART" RESIZING ---
-		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		video.bitmap.onTextureSetup.add(function()
 		{
-			if(video == null || !video.exists) {
-				tmr.cancel();
-				return;
-			}
-			
-			// Is the video loaded? (Width > 0)
-			if(video.bitmap != null && video.bitmap.bitmapData != null && video.bitmap.bitmapData.width > 0) {
-				video.setGraphicSize(FlxG.width, FlxG.height);
-				video.updateHitbox();
-				video.screenCenter();
-				tmr.cancel(); // Stop checking, we are done!
-			}
-		}, 0); 
+			video.setGraphicSize(FlxG.width, FlxG.height);
+			video.updateHitbox();
+			video.screenCenter();
+		});
+
+		video.play(filepath);
 		
 		#else
 		trace('Videos not allowed on this platform!');
@@ -767,6 +758,14 @@ class TitleState extends MusicBeatState
 						FreeplayState.vocals.fadeOut();
 					}
 				}
+				else
+				{
+					if (FlxG.sound.music != null)
+						FlxG.sound.music.volume = 0.7;
+				}
+				#else
+				if (FlxG.sound.music != null)
+					FlxG.sound.music.volume = 0.7;
 				#end
 				
 				// 2. Set specific flag so MainMenu knows to "catch" the flash

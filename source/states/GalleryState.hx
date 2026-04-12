@@ -203,7 +203,7 @@ class GalleryState extends MusicBeatState
 			daSound.pause();
 
 		videoSprite = new FlxVideoSprite();
-		videoSprite.play(fileName);
+		add(videoSprite);
 		
 		// Callback when video ends
 		videoSprite.bitmap.onEndReached.add(function() {
@@ -215,23 +215,14 @@ class GalleryState extends MusicBeatState
 				FlxG.sound.music.resume();
 		});
 
-		// Smart Resize (Same as TitleState logic)
-		new FlxTimer().start(0.01, function(tmr:FlxTimer)
+		videoSprite.bitmap.onTextureSetup.add(function()
 		{
-			if(videoSprite == null || !videoSprite.exists) {
-				tmr.cancel();
-				return;
-			}
-			
-			if(videoSprite.bitmap != null && videoSprite.bitmap.bitmapData != null && videoSprite.bitmap.bitmapData.width > 0) {
-				videoSprite.setGraphicSize(FlxG.width, FlxG.height);
-				videoSprite.updateHitbox();
-				videoSprite.screenCenter();
-				tmr.cancel();
-			}
-		}, 0);
+			videoSprite.setGraphicSize(FlxG.width, FlxG.height);
+			videoSprite.updateHitbox();
+			videoSprite.screenCenter();
+		});
 
-		add(videoSprite);
+		videoSprite.play(fileName);
 		#else
 		trace("VIDEOS NOT ALLOWED IN PROJECT.XML");
 		#end

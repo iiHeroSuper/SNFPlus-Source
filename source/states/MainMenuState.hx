@@ -31,9 +31,9 @@ class MainMenuState extends MusicBeatState
 	// Main Menu Assets
 	var background:FlxSprite;
 	var checkerboard:FlxBackdrop;
+	var logoTrail:FlxTrail;
 	var logo:FlxSprite;
 	var aeroBar:FlxSprite;
-	var logoTrail:FlxTrail;
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var middleOptions:Array<String> = ['play', 'gallery', 'credits', 'soundtest'];
 	var curSelected:Int = 1; 
@@ -75,7 +75,7 @@ class MainMenuState extends MusicBeatState
 		logo.updateHitbox();
 		logo.screenCenter(X);
 		
-		logoTrail = new FlxTrail(logo, null, 4, 4, 0.3); 
+		logoTrail = new FlxTrail(logo, null, 12, 7, 0.7, 0.04);
 		add(logoTrail);
 		add(logo);
 		
@@ -350,20 +350,34 @@ class MainMenuState extends MusicBeatState
 			lockedInput = true;
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			
-			FlxTween.tween(blender, {alpha: 0}, 0.2);
-			selector.visible = false;
-			storyBtn.visible = false;
-			freeplayBtn.visible = false;
+			FlxTween.tween(blender, {alpha: 0}, 0.5);
+			FlxTween.tween(selector, {alpha: 0}, 0.3);
 			
-			new FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer) {
+			// Slide buttons back up off-screen
+			FlxTween.tween(storyBtn, {y: -storyBtn.height - 150}, 0.6, {ease: FlxEase.expoIn});
+			FlxTween.tween(freeplayBtn, {y: -freeplayBtn.height - 50}, 0.6, {ease: FlxEase.expoIn, startDelay: 0.1});
+			
+			// Slide main menu items back up from below
+			FlxTween.tween(aeroBar, {y: aeroBar.y - 400}, 0.6, {ease: FlxEase.expoOut, startDelay: 0.3});
+			FlxTween.tween(arrowL, {y: arrowL.y - 400}, 0.6, {ease: FlxEase.expoOut, startDelay: 0.3});
+			FlxTween.tween(arrowR, {y: arrowR.y - 400}, 0.6, {ease: FlxEase.expoOut, startDelay: 0.3});
+			menuItems.forEach(function(spr:FlxSprite) {
+				FlxTween.tween(spr, {y: spr.y - 400}, 0.6, {ease: FlxEase.expoOut, startDelay: 0.3});
+			});
+			
+			// Fade logo back in
+			FlxTween.tween(logo, {alpha: 1}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3});
+			logoTrail.forEach(function(spr:FlxSprite) {
+				FlxTween.tween(spr, {alpha: 1}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3});
+			});
+			
+			new FlxTimer().start(0.9, function(tmr:flixel.util.FlxTimer) {
 				blender.visible = false;
+				storyBtn.visible = false;
+				freeplayBtn.visible = false;
+				selector.visible = false;
+				
 				menuMode = 0; 
-				menuItems.visible = true;
-				arrowL.visible = true;
-				arrowR.visible = true;
-				aeroBar.visible = true;
-				logo.visible = true;
-				logoTrail.visible = true;
 				lockedInput = false; 
 			});
 		}
@@ -477,23 +491,54 @@ class MainMenuState extends MusicBeatState
 		{
 			case 'play':
 				lockedInput = true;
-				menuMode = 1;
-				menuItems.visible = false;
-				aeroBar.visible = false;
-				arrowL.visible = false;
-				arrowR.visible = false;
-				logo.visible = false;
-				logoTrail.visible = false;
 				
+				// Fade out logo and trail
+				FlxTween.tween(logo, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+				logoTrail.forEach(function(spr:FlxSprite) {
+					FlxTween.tween(spr, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+				});
+				
+				// Slide main menu row down
+				FlxTween.tween(aeroBar, {y: aeroBar.y + 400}, 0.6, {ease: FlxEase.backIn});
+				FlxTween.tween(arrowL, {y: arrowL.y + 400}, 0.6, {ease: FlxEase.backIn});
+				FlxTween.tween(arrowR, {y: arrowR.y + 400}, 0.6, {ease: FlxEase.backIn});
+				menuItems.forEach(function(spr:FlxSprite) {
+					FlxTween.tween(spr, {y: spr.y + 400}, 0.6, {ease: FlxEase.backIn});
+				});
+
+				// Fade in blender
 				blender.visible = true;
-				FlxTween.tween(blender, {alpha: 1}, 0.4, {ease: FlxEase.quartOut});
+				blender.alpha = 0;
+				FlxTween.tween(blender, {alpha: 1}, 0.5, {ease: FlxEase.quartOut, startDelay: 0.2});
+
+				// Set up play buttons
 				storyBtn.visible = true;
 				freeplayBtn.visible = true;
 				selector.visible = true;
 				
+				var targetStoryY = (FlxG.height / 2) - 220;
+				var targetFreeplayY = (FlxG.height / 2) - 5;
+				
+				// Start them off-screen above
+				storyBtn.y = -storyBtn.height - 150;
+				freeplayBtn.y = -freeplayBtn.height - 50;
+				
 				updatePlaySelectSelection(0);
-				new flixel.util.FlxTimer().start(0.2, function(tmr:flixel.util.FlxTimer)
+				selector.alpha = 0;
+				
+				// Smooth slide down into place
+				FlxTween.tween(storyBtn, {y: targetStoryY}, 0.8, {ease: FlxEase.expoOut, startDelay: 0.4, onUpdate: function(twn:FlxTween) {
+					if (curPlaySelect == 0) selector.y = storyBtn.y + (storyBtn.height / 2) - (selector.height / 2);
+				}});
+				FlxTween.tween(freeplayBtn, {y: targetFreeplayY}, 0.8, {ease: FlxEase.expoOut, startDelay: 0.5, onUpdate: function(twn:FlxTween) {
+					if (curPlaySelect == 1) selector.y = freeplayBtn.y + (freeplayBtn.height / 2) - (selector.height / 2);
+				}});
+				
+				FlxTween.tween(selector, {alpha: 1}, 0.4, {ease: FlxEase.quartOut, startDelay: 0.8});
+
+				new flixel.util.FlxTimer().start(1.3, function(tmr:flixel.util.FlxTimer)
 				{
+					menuMode = 1;
 					lockedInput = false;
 				});
 				return;
