@@ -252,6 +252,7 @@ class SoundTestState extends MusicBeatState
             var soundName = soundList[pcmValue];
 			
             try {
+				if(FlxG.sound.music != null) FlxG.sound.music.stop();
 				FlxG.sound.play(Paths.sound(soundName));
 			} catch(e:Dynamic) {
 				trace("Could not play sound: " + soundName);

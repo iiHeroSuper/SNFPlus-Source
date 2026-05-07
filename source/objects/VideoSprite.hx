@@ -1,8 +1,15 @@
 // script by tyler :3 (this took me hours.)
+// patched for safe thread disposal
 
 package objects;
 
 import flixel.addons.display.FlxPieDial;
+import flixel.group.FlxSpriteGroup;
+import flixel.FlxSprite;
+import flixel.FlxG;
+import flixel.util.FlxColor;
+import flixel.math.FlxMath;
+import flixel.util.FlxTimer;
 
 #if hxCodec
 import hxcodec.flixel.FlxVideoSprite;
@@ -28,6 +35,11 @@ class VideoSprite extends FlxSpriteGroup {
 
 	public var waiting:Bool = false;
 	public var didPlay:Bool = false;
+
+	private var _videoEnded:Bool = false; 
+	private var _isDestroying:Bool = false;
+	private var destroyTimer:FlxTimer;
+	private static var _gcSafetyHook:VideoSprite;
 
 	public function new(videoName:String, isWaiting:Bool, canSkip:Bool = false, shouldLoop:Bool = false) {
 		super();
@@ -59,66 +71,109 @@ class VideoSprite extends FlxSpriteGroup {
 		#if hxCodec
 		if(!shouldLoop)
 		{
-			// FIX: Access signal via .bitmap
-			videoSprite.bitmap.onEndReached.add(function() {
-				if(alreadyDestroyed) return;
-	
-				trace('Video destroyed');
-				if(cover != null)
-				{
-					remove(cover);
-					cover.destroy();
-				}
-		
-				PlayState.instance.remove(this);
-				destroy();
-				alreadyDestroyed = true;
-			});
+			if (videoSprite.bitmap != null) {
+				videoSprite.bitmap.onEndReached.add(function() {
+					_videoEnded = true; 
+				});
+			} else {
+				FlxG.log.error("Video bitmap is null! Crash prevented.");
+			}
 		}
-
-		// hxCodec doesn't need onFormatSetup usually, we just play the video
-		// we set the size immediately after play, or let it handle itself.
-		// for safety, we just ensure it's centered.
 		#end
 
 		// start video and adjust resolution to screen size
 		#if hxCodec
 		var filepath:String = Paths.video(videoName);
-		videoSprite.play(filepath, shouldLoop);
 		
-		// force strict sizing to screen
-		videoSprite.setGraphicSize(FlxG.width, FlxG.height);
-		videoSprite.updateHitbox();
-		videoSprite.screenCenter();
+		if (videoSprite.bitmap != null) {
+			videoSprite.bitmap.onTextureSetup.add(function() {
+				if (videoSprite != null && videoSprite.bitmap != null) {
+					videoSprite.setGraphicSize(FlxG.width, FlxG.height);
+					videoSprite.updateHitbox();
+					videoSprite.screenCenter();
+				}
+			});
+		}
+
+		videoSprite.play(filepath, shouldLoop);
 		#end
+		_gcSafetyHook = this; // Lock into memory
 	}
 
 	var alreadyDestroyed:Bool = false;
 	override function destroy()
 	{
-		if(alreadyDestroyed)
-		{
-			super.destroy();
-			return;
+		if(alreadyDestroyed) return;
+		alreadyDestroyed = true;
+
+		// Cancel the timer if the state switches abruptly
+		if (destroyTimer != null) {
+			destroyTimer.cancel();
+			destroyTimer = null;
 		}
 
-		trace('Video destroyed');
+		#if hxCodec
+		if(videoSprite != null)
+		{
+			if (videoSprite.bitmap != null) {
+				// Wipe listeners so they don't fire into the void
+				videoSprite.bitmap.onEndReached.removeAll();
+				videoSprite.bitmap.onTextureSetup.removeAll();
+				
+				// CRITICAL FIX: We absolutely CANNOT manually call bitmap.stop() here. 
+				// hxcodec's destroy() method does this safely. Calling it manually 
+				// when the video has naturally ended causes a hard crash.
+			}
+			remove(videoSprite);
+			videoSprite.destroy();
+			videoSprite = null;
+		}
+		#end
+
 		if(cover != null)
 		{
 			remove(cover);
 			cover.destroy();
+			cover = null;
 		}
 
-		if(finishCallback != null)
-			finishCallback();
+		// Prevent callbacks from firing during state switches
+		finishCallback = null;
 		onSkip = null;
 
-		PlayState.instance.remove(this);
+		if(PlayState.instance != null)
+			PlayState.instance.remove(this);
+
 		super.destroy();
+		_gcSafetyHook = null; 
 	}
 
 	override function update(elapsed:Float)
 	{
+		if (_isDestroying) return; // Ignore updates while cooling down
+
+		// 1. Safely process natural video end
+		if (_videoEnded) {
+			_videoEnded = false;
+			_isDestroying = true;
+			
+			var cb = finishCallback;
+			finishCallback = null; 
+			
+			// Hide the video instantly for a seamless visual transition
+			visible = false;
+
+			if (cb != null) cb();
+			
+			// Give libVLC 0.5 seconds to fully clean up its background threads
+			// before we wipe the Haxe object from memory.
+			destroyTimer = new FlxTimer().start(0.5, function(_) {
+				destroy();
+			});
+			return; 
+		}
+
+		// 2. Process hold-to-skip logic
 		if(canSkip)
 		{
 			if(Controls.instance.pressed('accept'))
@@ -133,18 +188,27 @@ class VideoSprite extends FlxSpriteGroup {
 
 			if(holdingTime >= _timeToSkip)
 			{
-				if(onSkip != null) onSkip();
-				finishCallback = null;
+				_isDestroying = true;
 				
-				#if hxCodec
-				// this is taking so fucking long.. access signal via .bitmap to dispatch
-				if(videoSprite != null && videoSprite.bitmap.onEndReached != null)
-					videoSprite.bitmap.onEndReached.dispatch();
-				#end
+				var skipCb = onSkip;
+				onSkip = null; 
+				finishCallback = null; 
 				
-				PlayState.instance.remove(this);
 				trace('Skipped video');
-				return;
+				
+				visible = false;
+
+				// Immediately pause audio so it doesn't overlap with the intro music
+				#if hxCodec
+				if (videoSprite != null) videoSprite.pause();
+				#end
+
+				if(skipCb != null) skipCb();
+				
+				destroyTimer = new FlxTimer().start(0.5, function(_) {
+					destroy();
+				});
+				return; 
 			}
 		}
 		super.update(elapsed);
@@ -184,9 +248,15 @@ class VideoSprite extends FlxSpriteGroup {
 	#if hxCodec
 	public function resume() if(videoSprite != null) videoSprite.resume();
 	public function pause() if(videoSprite != null) videoSprite.pause();
+	public function stop() {
+		if(videoSprite != null && videoSprite.bitmap != null) {
+			_videoEnded = true;
+		}
+	}
 	#else
 	public function resume() {}
 	public function pause() {}
+	public function stop() {}
 	#end
 
 	#end

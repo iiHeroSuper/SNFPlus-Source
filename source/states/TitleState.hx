@@ -19,22 +19,6 @@ import states.StoryMenuState;
 import states.OutdatedState;
 import states.MainMenuState;
 
-// --- VIDEO IMPORTS ---
-#if VIDEOS_ALLOWED
-import flixel.FlxSprite;
-import flixel.util.FlxTimer;
-import flixel.util.FlxColor;
-import openfl.utils.Assets as OpenFlAssets;
-
-#if sys
-import sys.FileSystem;
-import sys.io.File;
-#end
-
-import hxcodec.flixel.FlxVideoSprite;
-#end
-// -----------------------------
-
 typedef TitleData =
 {
 	titlex:Float,
@@ -77,16 +61,8 @@ class TitleState extends MusicBeatState
 	var easterEggKeysBuffer:String = '';
 	#end
 
-	var mustUpdate:Bool = false;
+var mustUpdate:Bool = false;
 	var titleJSON:TitleData;
-	
-	// --- VIDEO STATE VARIABLES ---
-	var videoPlaying:Bool = false;
-	
-	#if VIDEOS_ALLOWED
-	var video:FlxVideoSprite;
-	#end
-	// ----------------------------
 
 	public static var updateVersion:String = '';
 
@@ -169,7 +145,7 @@ class TitleState extends MusicBeatState
 		MusicBeatState.switchState(new ChartingState());
 		#else
 		
-		// --- START VIDEO LOGIC (Only runs on first load) ---
+		// --- START INTRO LOGIC (Only runs on first load) ---
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState) {
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;
@@ -181,11 +157,7 @@ class TitleState extends MusicBeatState
 			}
 			else
 			{
-				// Short delay to ensure state is ready before video tries to attach
-				new FlxTimer().start(0.1, function(tmr:FlxTimer)
-				{
-					startVideo('segasplash'); 
-				});
+				startIntro();
 			}
 		}
 		// --------------------------------------------------
@@ -260,7 +232,7 @@ class TitleState extends MusicBeatState
 			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
 			//EDIT THIS ONE IF YOU'RE MAKING A SOURCE CODE MOD!!!!
 				gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-				gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				gfDance.animation.addByIndices('danceLeft', 'gfDance', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 				gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		}
 
@@ -277,8 +249,10 @@ class TitleState extends MusicBeatState
 		
 		var animFrames:Array<FlxFrame> = [];
 		@:privateAccess {
-			titleText.animation.findByPrefix(animFrames, "ENTER IDLE");
-			titleText.animation.findByPrefix(animFrames, "ENTER FREEZE");
+			if (titleText.animation != null) {
+				titleText.animation.findByPrefix(animFrames, "ENTER IDLE");
+				titleText.animation.findByPrefix(animFrames, "ENTER FREEZE");
+			}
 		}
 		
 		if (animFrames.length > 0) {
@@ -382,24 +356,6 @@ class TitleState extends MusicBeatState
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER || controls.ACCEPT;
 		
-		// --- VIDEO SKIP CHECK ---
-		if (videoPlaying) {
-			if (pressedEnter || FlxG.keys.justPressed.SPACE) {
-				FlxG.log.notice("Video skipped by player input.");
-				
-				#if VIDEOS_ALLOWED
-				if(video != null) {
-					if(video.bitmap != null && video.bitmap.onEndReached != null)
-						video.bitmap.onEndReached.dispatch();
-				}
-				#end
-				
-				videoPlaying = false;
-				FlxG.keys.enabled = true; 
-			}
-			return;
-		}
-
 		#if mobile
 		for (touch in FlxG.touches.list)
 		{
@@ -532,53 +488,6 @@ class TitleState extends MusicBeatState
 
 		super.update(elapsed);
 	}
-
-	// --- VIDEO PLAYBACK FUNCTION ---
-	public function startVideo(name:String)
-	{
-		#if VIDEOS_ALLOWED
-		var filepath:String = Paths.video(name);
-		
-		#if sys
-		if(!sys.FileSystem.exists(filepath))
-		#else
-		if(!OpenFlAssets.exists(filepath))
-		#end
-		{
-			trace('Video file not found at: ' + filepath);
-			startIntro();
-			return;
-		}
-
-		videoPlaying = true;
-		
-		video = new FlxVideoSprite();
-		add(video);
-		
-		video.bitmap.onEndReached.add(function() 
-		{
-			video.destroy();
-			if(videoPlaying) {
-				videoPlaying = false;
-				startIntro();
-			}
-		});
-
-		video.bitmap.onTextureSetup.add(function()
-		{
-			video.setGraphicSize(FlxG.width, FlxG.height);
-			video.updateHitbox();
-			video.screenCenter();
-		});
-
-		video.play(filepath);
-		
-		#else
-		trace('Videos not allowed on this platform!');
-		startIntro();
-		#end
-	}
-	// -------------------------------
 
 	function createCoolText(textArray:Array<String>, ?offset:Float = 0)
 	{
@@ -782,5 +691,10 @@ class TitleState extends MusicBeatState
 				MusicBeatState.switchState(new MainMenuState());
 			}
 		}
+	}
+
+	override public function destroy()
+	{
+		super.destroy();
 	}
 }

@@ -15,7 +15,7 @@ import backend.Paths;
 import flixel.util.FlxTimer;
 
 import flixel.tweens.FlxEase;
-import flixel.addons.effects.FlxTrail;
+import objects.AfterImage;
 
 import options.OptionsState; 
 import states.CreditsState;
@@ -31,7 +31,8 @@ class MainMenuState extends MusicBeatState
 	// Main Menu Assets
 	var background:FlxSprite;
 	var checkerboard:FlxBackdrop;
-	var logoTrail:FlxTrail;
+	var afterImages:FlxTypedGroup<AfterImage>;
+	var afterImageTimer:Float = 0;
 	var logo:FlxSprite;
 	var aeroBar:FlxSprite;
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -75,8 +76,8 @@ class MainMenuState extends MusicBeatState
 		logo.updateHitbox();
 		logo.screenCenter(X);
 		
-		logoTrail = new FlxTrail(logo, null, 12, 7, 0.7, 0.04);
-		add(logoTrail);
+		afterImages = new FlxTypedGroup<AfterImage>();
+		add(afterImages);
 		add(logo);
 		
 		FlxTween.tween(logo, { y: logo.y + 20 }, 1.2, {
@@ -205,6 +206,18 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+
+		if (logo.visible && logo.alpha > 0.1)
+		{
+			afterImageTimer += elapsed;
+			if (afterImageTimer >= 0.05)
+			{
+				afterImageTimer = 0;
+				var ai:AfterImage = afterImages.recycle(AfterImage);
+				ai.setup(logo, FlxColor.WHITE, 0.5);
+			}
+		}
+
 		if (menuMode == 0) {
 			updateMainMenu();
 		} else {
@@ -367,7 +380,7 @@ class MainMenuState extends MusicBeatState
 			
 			// Fade logo back in
 			FlxTween.tween(logo, {alpha: 1}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3});
-			logoTrail.forEach(function(spr:FlxSprite) {
+			afterImages.forEach(function(spr:AfterImage) {
 				FlxTween.tween(spr, {alpha: 1}, 0.6, {ease: FlxEase.quadIn, startDelay: 0.3});
 			});
 			
@@ -494,7 +507,7 @@ class MainMenuState extends MusicBeatState
 				
 				// Fade out logo and trail
 				FlxTween.tween(logo, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
-				logoTrail.forEach(function(spr:FlxSprite) {
+				afterImages.forEach(function(spr:AfterImage) {
 					FlxTween.tween(spr, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
 				});
 				

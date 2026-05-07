@@ -122,7 +122,7 @@ class GalleryState extends MusicBeatState
 		if(inVideo) {
 			#if VIDEOS_ALLOWED
 			if(FlxG.keys.justPressed.ENTER || FlxG.keys.justPressed.ESCAPE || FlxG.keys.justPressed.SPACE) {
-				if(videoSprite != null && videoSprite.bitmap.onEndReached != null)
+				if(videoSprite != null && videoSprite.bitmap != null && videoSprite.bitmap.onEndReached != null)
 					videoSprite.bitmap.onEndReached.dispatch();
 			}
 			#end
@@ -206,21 +206,30 @@ class GalleryState extends MusicBeatState
 		add(videoSprite);
 		
 		// Callback when video ends
-		videoSprite.bitmap.onEndReached.add(function() {
-			videoSprite.destroy();
+		if (videoSprite.bitmap != null) {
+			videoSprite.bitmap.onEndReached.add(function() {
+				videoSprite.destroy();
+				inVideo = false;
+				
+				// Resume music
+				if(FlxG.sound.music != null)
+					FlxG.sound.music.resume();
+			});
+
+			videoSprite.bitmap.onTextureSetup.add(function()
+			{
+				videoSprite.setGraphicSize(FlxG.width, FlxG.height);
+				videoSprite.updateHitbox();
+				videoSprite.screenCenter();
+			});
+		} else {
+			FlxG.log.error("Video bitmap is null in GalleryState! Skipping video.");
 			inVideo = false;
-			
-			// Resume music
 			if(FlxG.sound.music != null)
 				FlxG.sound.music.resume();
-		});
-
-		videoSprite.bitmap.onTextureSetup.add(function()
-		{
-			videoSprite.setGraphicSize(FlxG.width, FlxG.height);
-			videoSprite.updateHitbox();
-			videoSprite.screenCenter();
-		});
+			videoSprite.destroy();
+			return;
+		}
 
 		videoSprite.play(fileName);
 		#else
